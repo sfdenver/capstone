@@ -1,18 +1,63 @@
+/* Standard Colors */
+
+
+/* Coolors Exported Palette - coolors.co/ffffff-364181-b2c8e9-719ad8-a30b37 */
+
+
+/* RGB */
+
+$color1: rgba(255, 255, 255, 1);
+$color2: rgba(54, 65, 129, 1);
+$color3: rgba(178, 200, 233, 1);
+$color4: rgba(113, 154, 216, 1);
+$color5: rgba(163, 11, 55, 1);
 body {
     /* set base background, colors, font family, font size */
-    background-color: silver;
-    color: gray;
+    background-color: rgba(54, 65, 129, 1);
+    color: rgba(178, 200, 233, 1);
     font-family: "Noto Sans HK", sans-serif;
-    font-size: 20px;
+    font-size: 15px;
 }
 
-h1 {
-    color: goldenrod;
-    font-size: 2em;
+.maincontainer1 {
+    /* template for main page */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(20px, auto) minmax(20px, auto);
+    grid-gap: 1px;
+    grid-template-areas: 'main' 'aside-1';
+    height: 70vh;
+    color: black;
 }
 
-h2 {
-    font-size: 1.5em;
+.container2 {
+    /* template for secondary content pages with no aside */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(20px, auto) minmax(20px, auto) minmax(100pct, auto) minmax(20px, auto);
+    grid-gap: 1px;
+    grid-template-areas: 'header' 'navigation' 'main' 'footer';
+    height: 100vh;
+    color: black;
+}
+
+header {
+    background-color: rgba(113, 154, 216, 1);
+}
+
+header>div>p {
+    background-color: rgba(113, 154, 216, 1);
+    height: 15px;
+    font-size-adjust: 15px;
+    color: rgba(163, 11, 55, 1);
+    padding: 0;
+    margin: 0;
+    position: :
+}
+
+main,
+aside {
+    background-color: rgba(178, 200, 233, 1):
 }
 
 ul {
@@ -44,28 +89,24 @@ section {
 /* Navigation section */
 
 nav {
-    background: whitesmoke;
-    padding: 10px 0;
+    background: rgba(255, 255, 255, 1);
+    padding: 5px 0;
 }
 
 nav>ul {
     display: flex;
     justify-content: space-around;
-    padding: 10px 0px;
+    padding: 5px 0px;
     margin: 0px 0px;
-    background: whitesmoke;
-    color: darkgrey;
 }
 
 nav>ul>li {
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .dropdown ul {
     justify-content: space-around;
     display: none;
-    background: whitesmoke;
-    color: darkgrey;
     border-radius: 0 0 3px 3px;
     /* moves out of document flow */
     position: absolute;
@@ -85,6 +126,8 @@ nav>ul>li {
 
 /* Hero section */
 
+
+/* save original version
 header,
 header div {
     display: flex;
@@ -95,20 +138,20 @@ header div {
 
 header {
     height: 20vh;
-    /*   background-image: url(https://picsum.photos/900/560?grayscale);
+    background-image: url(https://picsum.photos/900/560?grayscale);
 background-repeat: no-repeat;
-background-position: top center;  */
+background-position: top center;
     background: url(https://picsum.photos/900/560?grayscale) no-repeat top center;
     background-size: cover;
 }
 
 header div {
-    /* background is set at 50% transparency */
     background: rgba(255, 248, 220, 0.5);
     width: 100%;
     font-size: 15px;
     height: 100%;
 }
+*/
 
 
 /* attempt to convert banner to a  - not working yet

@@ -15,8 +15,8 @@ function render(state){
     // functions are invoked to return the results for each
     console.log('render using state = ', state);
     document.querySelector('#root').innerHTML = `
-      ${Navigation(state)}
       ${Header(state)}
+      ${Navigation(state)}
       ${Main(state)}
       ${Footer(state)}
     `;

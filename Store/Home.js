@@ -1,9 +1,8 @@
 export default {
     'links': {
-        'primary': [ 'Home', 'About', 'Contact', 'Blog' ],
-        'dropdown': [ 'Project1', 'Project2', 'Project3' ]
+        'primary': [ 'Home' ],
+        'dropdown': [ 'Home', 'Car', 'MaintPrompt', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards' ]
     },
-
     'title': 'This is the home page!',
     'page': `
       <section>

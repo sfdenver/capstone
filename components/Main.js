@@ -1,5 +1,5 @@
 export default (state) => `
-    <main>
+    <main class="maincontainer1">
       ${state.page}
     </main>
 `;

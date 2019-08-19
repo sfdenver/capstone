@@ -132,16 +132,16 @@ function linkBuilder(links) {
   return links.map(function (link) {
     return (
       /**
-                                  An HTML data attribute provides additional information that can be used by JS as a hook.
-                                  In this case, 'navigo' is something that navigo uses to bind the link 'text' to the   Navigo router.
-                                       */
+                                                                  An HTML data attribute provides additional information that can be used by JS as a hook.
+                                                                  In this case, 'navigo' is something that navigo uses to bind the link 'text' to the   Navigo router.
+                                                                       */
       "<li><a href=\"/".concat(link.toLowerCase(), "\"\n        data-navigo>").concat(link, "</a></li>")
     );
   }).join(' ');
 }
 
 var _default = function _default(state) {
-  return "\n<nav>\n    <ul>\n        ".concat(linkBuilder(state.links.primary), "\n        <li class=\"dropdown\">\n        Portfolio\n        <ul>\n            ").concat(linkBuilder(state.links.dropdown), "\n        </ul>\n        </li>\n    </ul>\n  </nav>\n");
+  return "\n<nav>\n    <ul>\n        ".concat(linkBuilder(state.links.primary), "\n        <li class=\"dropdown\">\n        My Garage\n        <ul>\n            ").concat(linkBuilder(state.links.dropdown), "\n        </ul>\n        </li>\n    </ul>\n  </nav>\n");
 };
 
 exports.default = _default;
@@ -154,7 +154,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(state) {
-  return "\n    <header>\n        <div>\n            <h1>header placeholder</h1>\n            <h1>luvmyride</h1>\n        </div>\n    </header>\n";
+  return "\n    <header>\n        <div>\n            <p>To Do-luvmyride title</p>\n        </div>\n    </header>\n";
 };
 
 exports.default = _default;
@@ -167,7 +167,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(state) {
-  return "\n    <main>\n      ".concat(state.page, "\n    </main>\n");
+  return "\n    <main class=\"maincontainer1\">\n      ".concat(state.page, "\n    </main>\n");
 };
 
 exports.default = _default;
@@ -180,7 +180,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(state) {
-  return "\n<footer>\n<ul>\n    <li>\n        <a href=\"https://github.com/sfdenver/savvy-coders-portfolio1\" target=\"_blank\">\n            <span><i class=\"fab fa-github-square\"></i> </span>\n        </a>\n    </li>\n    <li>\n        <a href=\"https://github.com/sfdenver/savvy-coders-portfolio1\" target=\"_blank\">\n            <span><i class=\"fab fa-github-square\"></i> </span>\n        </a>\n    </li>\n    <li>\n        <a href=\"https://github.com/sfdenver/savvy-coders-portfolio1\" target=\"_blank\">\n            <span><i class=\"fab fa-github-square\"></i> </span>\n        </a>\n    </li>\n\n</ul>\n<address>\n    Steve Field <br>\n    123 St. Elsewhere <br>\n    St Louis, MO 63131 <br>\n</address>\n</footer>\n";
+  return "\n<footer>\n<ul>\n    <li>\n       To Do - logo\n    </li>\n    <li>\n      To Do - footer message\n    </li>\n</footer>\n";
 };
 
 exports.default = _default;
@@ -198,8 +198,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _default = {
   'links': {
-    'primary': ['Home', 'About', 'Contact', 'Blog'],
-    'dropdown': ['Project1', 'Project2', 'Project3']
+    'primary': ['Home'],
+    'dropdown': ['Home', 'Car', 'MaintPrompt', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
   'title': 'This is the home page!',
   'page': "\n      <section>\n      <h2> Section 1 Header </h2>\n      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n      magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n      reiciendis distinctio,\n      impedit accusantium libero!Iusto mollitia minus ipsam quam laborum!\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Read More!</a>\n      </section>\n\n      <section>\n      <h2> Section 2 Header </h2>\n      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n      magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n      reiciendis distinctio, impedit accusantium libero!Iusto mollitia minus ipsam quam laborum!\n      </p>\n      <a href = \"#\" class = \"cta-btn\" > Read More! </a>\n      </section>\n\n      <section >\n      <h2> Section 3 Header </h2> <\n      p > Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n      magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n      reiciendis distinctio,\n      impedit accusantium libero!Iusto mollitia minus ipsam quam laborum!\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Read More! </a>\n\n      </section>\n      "
@@ -2090,7 +2090,7 @@ var router = new _navigo.default(location.origin);
 function render(state) {
   // functions are invoked to return the results for each
   console.log('render using state = ', state);
-  document.querySelector('#root').innerHTML = "\n      ".concat((0, _Navigation.default)(state), "\n      ").concat((0, _Header.default)(state), "\n      ").concat((0, _Main.default)(state), "\n      ").concat((0, _Footer.default)(state), "\n    "); // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
+  document.querySelector('#root').innerHTML = "\n      ".concat((0, _Header.default)(state), "\n      ").concat((0, _Navigation.default)(state), "\n      ").concat((0, _Main.default)(state), "\n      ").concat((0, _Footer.default)(state), "\n    "); // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
 
   router.updatePageLinks();
 } // testing line:  console.log('state came in as ' + state);
@@ -2162,7 +2162,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     store.blog.page = blogHTML;
 });
 */
-},{"./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/16220/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/17136/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2190,7 +2190,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59090" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62658" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2365,5 +2365,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/16220/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/17136/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/capstone.e31bb0bc.js.map
