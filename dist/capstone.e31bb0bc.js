@@ -132,17 +132,19 @@ function linkBuilder(links) {
   return links.map(function (link) {
     return (
       /**
-                                                                  An HTML data attribute provides additional information that can be used by JS as a hook.
-                                                                  In this case, 'navigo' is something that navigo uses to bind the link 'text' to the   Navigo router.
-                                                                       */
+                                                                                  An HTML data attribute provides additional information that can be used by JS as a hook.
+                                                                                  In this case, 'navigo' is something that navigo uses to bind the link 'text' to the   Navigo router.
+                                                                                       */
       "<li><a href=\"/".concat(link.toLowerCase(), "\"\n        data-navigo>").concat(link, "</a></li>")
     );
   }).join(' ');
 }
 
 var _default = function _default(state) {
-  return "\n<nav>\n    <ul>\n        ".concat(linkBuilder(state.links.primary), "\n        <li class=\"dropdown\">\n        My Garage\n        <ul>\n            ").concat(linkBuilder(state.links.dropdown), "\n        </ul>\n        </li>\n    </ul>\n  </nav>\n");
+  return "\n<nav>\n    <ul>\n        <li class=\"dropdown\">\n        My Garage\n        <ul>\n            ".concat(linkBuilder(state.links.dropdown), "\n        </ul>\n        </li>\n    </ul>\n  </nav>\n");
 };
+/** ${linkBuilder(state.links.primary)} */
+
 
 exports.default = _default;
 },{}],"components/Header.js":[function(require,module,exports) {

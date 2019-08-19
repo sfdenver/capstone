@@ -1,22 +1,20 @@
-/* Standard Colors */
-
-
-/* Coolors Exported Palette - coolors.co/ffffff-364181-b2c8e9-719ad8-a30b37 */
-
-
-/* RGB */
+/* Standard Colors 
+   Coolors Exported Palette - coolors.co/ffffff-364181-b2c8e9-719ad8-a30b37
+   RGB */
 
 $color1: rgba(255, 255, 255, 1);
 $color2: rgba(54, 65, 129, 1);
 $color3: rgba(178, 200, 233, 1);
 $color4: rgba(113, 154, 216, 1);
 $color5: rgba(163, 11, 55, 1);
+
+/* set base background, colors, font family, font size */
+
 body {
-    /* set base background, colors, font family, font size */
     background-color: rgba(54, 65, 129, 1);
     color: rgba(178, 200, 233, 1);
     font-family: "Noto Sans HK", sans-serif;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .maincontainer1 {
@@ -47,15 +45,14 @@ header {
 
 header>div>p {
     background-color: rgba(113, 154, 216, 1);
-    height: 15px;
+    height: 20px;
     font-size-adjust: 15px;
     color: rgba(163, 11, 55, 1);
     padding: 0;
     margin: 0;
-    position: :
+    position: left;
 }
 
-main,
 aside {
     background-color: rgba(178, 200, 233, 1):
 }
@@ -82,7 +79,7 @@ img {
 }
 
 section {
-    font-size: 10px;
+    font-size: 20px;
 }
 
 
@@ -91,17 +88,20 @@ section {
 nav {
     background: rgba(255, 255, 255, 1);
     padding: 5px 0;
+    font-size: 20px;
 }
 
 nav>ul {
     display: flex;
     justify-content: space-around;
-    padding: 5px 0px;
+    justify-items: left;
+    position: : padding: 5px 0px;
     margin: 0px 0px;
+    font-size: 20px;
 }
 
 nav>ul>li {
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .dropdown ul {
@@ -165,10 +165,12 @@ width: 100vw;
 
 main {
     display: flex;
+    background-color: rgba(54, 65, 129, 1);
 }
 
 main>section {
-    background-color: cornsilk;
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
     margin: 10px;
     padding: 10px;
 }
@@ -181,8 +183,8 @@ main section h2 {
 .cta-btn {
     display: inline-block;
     border-radius: 3px;
-    background-color: slategrey;
-    color: silver;
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
     margin: 10px;
     padding: 10px;
     text-align: center;
@@ -202,7 +204,7 @@ main section h2 {
 /*  Footer */
 
 footer {
-    border-top: solid 3px slategray;
+    border-top: solid 3px red;
     transform: translateY(-3px);
     padding: 0px 20px;
 }
@@ -258,21 +260,9 @@ input [type="checkbox"] {
 
 /* needs to be refactored to not overlap previous style statement */
 
-footer,
-nav {
+footer {
     display: flex;
     align-items: center;
-}
-
-ul {
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-}
-
-nav>ul {
-    width: 100%;
 }
 
 footer>ul {
@@ -295,14 +285,6 @@ address {
     grid-template-areas: 'header' 'navigation' 'main' 'aside-1' 'aside-2' 'footer';
     height: 100vh;
     color: black;
-}
-
-main {
-    background: cornsilk 50%;
-}
-
-aside {
-    background: silver;
 }
 
 
