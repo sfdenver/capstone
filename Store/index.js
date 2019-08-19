@@ -1,20 +1,20 @@
 export { default as home }
     from './Home';
-export { default as Car }
+export { default as car }
     from './Car';
-export { default as CarDetails }
+export { default as cardetails }
     from './CarDetails';
-export { default as CarHelp }
+export { default as carhelp }
     from './CarHelp';
-export { default as MaintPrompt }
-    from './MaintPrompt';
-export { default as Profile }
+export { default as maintprompts }
+    from './MaintPrompts';
+export { default as profile }
     from './Profile';
-export { default as Promotion }
+export { default as promotion }
     from './Promotion';
-export { default as Providers }
+export { default as providers }
     from './Providers';
-export { default as Records }
+export { default as records }
     from './Records';
-export { default as Standards }
+export { default as standards }
     from './Standards';

@@ -1,7 +1,7 @@
 export default {
     'links': {
         'primary': [ 'Home' ],
-        'dropdown': [ 'Home', 'Car', 'MaintPrompt', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards' ]
+        'dropdown': [ 'Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards' ]
     },
     'title': 'Maintenance Records',
     'page': `

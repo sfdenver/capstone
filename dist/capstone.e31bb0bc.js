@@ -199,13 +199,13 @@ exports.default = void 0;
 var _default = {
   'links': {
     'primary': ['Home'],
-    'dropdown': ['Home', 'Car', 'MaintPrompt', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
+    'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
   'title': 'This is the home page!',
   'page': "\n      <section>\n      <h2> Section 1 Header </h2>\n      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n      magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n      reiciendis distinctio,\n      impedit accusantium libero!Iusto mollitia minus ipsam quam laborum!\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Read More!</a>\n      </section>\n\n      <section>\n      <h2> Section 2 Header </h2>\n      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n      magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n      reiciendis distinctio, impedit accusantium libero!Iusto mollitia minus ipsam quam laborum!\n      </p>\n      <a href = \"#\" class = \"cta-btn\" > Read More! </a>\n      </section>\n\n      <section >\n      <h2> Section 3 Header </h2> <\n      p > Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n      magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n      reiciendis distinctio,\n      impedit accusantium libero!Iusto mollitia minus ipsam quam laborum!\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Read More! </a>\n\n      </section>\n      "
 };
 exports.default = _default;
-},{}],"store/Contact.js":[function(require,module,exports) {
+},{}],"store/Car.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -214,48 +214,14 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _default = {
   'links': {
-    'primary': ['Home', 'About', 'Contact', 'Blog'],
-    'dropdown': ['Project1', 'Project2', 'Project3']
+    'primary': ['Home'],
+    'dropdown': ['Home', 'Car', 'MaintPrompt', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
-  'title': 'Contact Page',
-  'page': "\n  <!--\n  The action attribute defines where on the server the form data should be sent\n  The method attribute specifies the HTTP method (GET or POST)\n  -->\n\n  <form action=\"form-responses/new\" method=\"POST\">\n      <div class=\"input-group\">\n\n      <!-- Developer's Note: 'placeholder' without using < label > is NOT RECOMMENDED for accessibility purposes. -->\n      <input type=\"text\" name=\"firstname\" placeholder=\"First Name\" autofocus required />\n      <input type=\"text\" name=\"lastname\" placeholder=\"Last Name\" />\n      <input type=\"email\" name=\"userEmail\" placeholder=\"your.email@example.com\" />\n      </div>\n\n      <p>What's this message about?</p>\n\n      <div class=\"input-group\">\n          <span>\n              <input type=\"radio\" name=\"subject\" value=\"professional\" id=\"pro\" checked />\n              <label for=\"pro\">I'd like to hire you!</label>\n          </span>\n\n          <span>\n              <input type=\"radio\" name=\"subject\" value=\"personal\" id=\"personal\" />\n              <label for=\"personal\">Personal message</label>\n          </span>\n\n          <span>\n              <input type=\"radio\" name=\"subject\" value=\"other\" />\n              <label>Don't know/something else</label>\n          </span>\n      </div>\n\n      <div class=\"input-group\">\n          <input type=\"checkbox\" name=\"optin\" value=\"trusting\" checked />Subscribe me to\n              your newsletter!\n          <input type=\"checkbox\" name=\"optout\" value=\"skeptical\" disabled />Not at this time\n      </div>\n\n      <div class=\"input-group input-group--flex\">\n\n          <label for=\"marketing\">How did you hear about me?</label>\n              <select name=\"marketing\">\n              <optgroup label=\"Online\">\n                  <option value=\"social\">Social Media (FB, Twitter, LinkedIn)</option>\n                  <option value=\"github\">Online Portfolio (GitHub)</option>\n                  <option value=\"search\">Search Engine</option>\n                  <option value=\"email\">Email</option>\n              </optgroup>\n              <optgroup label=\"In-Person\">\n                  <option value=\"networking\">We met at a networking event</option>\n                  <option value=\"referral\">Personal referral</option>\n                  <option value=\"random\">We met somewhere else</option>\n              </optgroup>\n                  <option value=\"other\">Other</option>\n              </select>\n      </div>\n\n      <div class=\"input-group--flex\">\n          <textarea name=\"user_message\" placeholder=\"Please provide comments and feedback!\" rows=\"8\" cols=\"40\"></textarea>\n          <div>\n              <input type=\"submit\" />\n              <input type=\"reset\" value=\"Reset\">\n          </div>\n      </div>\n  </form>\n\n  "
+  'title': 'Car Summary',
+  'page': "\n    <section>\n    <h2>To Do - Car Picture<span>Car Name </h2>\n    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n    magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n    </p>\n    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n    magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n    </p>\n    <a href = \"#\" class = \"cta-btn\" >Car Details</a>\n    </section>\n\n    <section>\n    <h2> Maintenance Records</h2>\n    <h3> To Do - Date, Provider</h3>\n    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n    magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n    reiciendis distinctio, impedit accusantium libero!Iusto mollitia minus ipsam quam laborum!\n    </p>\n    <a href = \"#\" class = \"cta-btn\" >Service Details</a>\n    </section>\n\n    <section >\n    <h2> Section 3 Header </h2> <\n    p > Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n    magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n    reiciendis distinctio,\n    impedit accusantium libero!Iusto mollitia minus ipsam quam laborum!\n    </p>\n    </section>\n\n    <section >\n    <a href = \"#\" class = \"cta-btn\" >Maintenance Help</a>\n    <a href = \"#\" class = \"cta-btn\" >Maintenance Standards</a>\n    </section>\n    "
 };
 exports.default = _default;
-},{}],"store/Projects.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.project3 = exports.project2 = exports.project1 = void 0;
-var project1 = {
-  'links': {
-    'primary': ['Home', 'About', 'Contact', 'Blog'],
-    'dropdown': ['Project1', 'Project2', 'Project3']
-  },
-  'title': 'Project 1',
-  'page': "\n    <h2>Project 1 - FizzBuzz</h2>\n        <p>Part 1 - Performs FizzBuzz once\n        <br>1. Create function fizBuzz with one input\n        <br>2. If input number is divisible by 3 or 5, display FizzBuzz\n        <br>3. If input number is divisible by 3, display Fizz\n        <br>4. If input number is divisible by 5, display Buzz\n        <br>5. If input number is none of the above, and an integer, display Not divisible by 3 or 5\n        <br>6. all other cases, display error message Not an Integer\n        <br>\n        <br>Part 2 - place FizzBuzz in a While Loop up to 100\n        <br>\n        <br>View Console for results\n        </p>\n\n        <Script>\n\n        function fizzBuzz(num){\n            if(num % 3 === 0 && num % 5 === 0){\n                return 'FizzBuzz';\n            }\n            if(num % 3 === 0){\n                return 'Fizz';\n            }\n            if(num % 5 === 0){\n                return 'Buzz';\n            }\n\n            return 'Not divisible by 3 or 5';\n        }\n\n        // Part 1 validation\n        console.log('Part 1 FizzBuzz validation');\n        console.log(fizzBuzz(15));\n        console.log(fizzBuzz(3));\n        console.log(fizzBuzz(5));\n        console.log(fizzBuzz(4.1));\n        console.log(fizzBuzz('four'));\n\n        // Part 2 While loop\n        console.log('Part 2 FizzBuzz in a While loop');\n        let number2 = 0;\n        const incr = 2;\n\n        console.log(' Increment by ' + incr);\n\n        while(number2 <= 60){\n            console.log(number2 + '  ' + fizzBuzz(number2));\n            number2 += incr;\n        }\n        console.log('Part 2 is finished with While loop');\n        </Script>\n        "
-};
-exports.project1 = project1;
-var project2 = {
-  'links': {
-    'primary': ['Home', 'About', 'Contact', 'Blog'],
-    'dropdown': ['Project1', 'Project2', 'Project3']
-  },
-  'title': 'Project 2',
-  'page': "\n    <h2>Project 2</h2>\n        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ullam cupiditate, et atque soluta eaque nobis, quasi rerum illum iusto veritatis maiores rem reiciendis quaerat minus velit, hic aspernatur. Reiciendis. </p>\n    "
-};
-exports.project2 = project2;
-var project3 = {
-  'links': {
-    'primary': ['Home', 'About', 'Contact', 'Blog'],
-    'dropdown': ['Project1', 'Project2', 'Project3']
-  },
-  'title': 'Project 3',
-  'page': "\n    <h2>Project 3</h2>\n        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ullam cupiditate, et atque soluta eaque nobis, quasi rerum illum iusto veritatis maiores rem reiciendis quaerat minus velit, hic aspernatur. Reiciendis. </p>\n    "
-};
-exports.project3 = project3;
-},{}],"store/Blog.js":[function(require,module,exports) {
+},{}],"store/CarDetails.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -264,15 +230,14 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _default = {
   'links': {
-    'primary': ['Home', 'About', 'Contact', 'Blog'],
-    'dropdown': ['Project1', 'Project2', 'Project3']
+    'primary': ['Home'],
+    'dropdown': ['Home', 'Car', 'MaintPrompt', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
-  'title': 'My Blog Page',
-  //
-  'page': "\n  <h2>Blog Posts</h2>\n      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ullam cupiditate, et atque soluta eaque nobis, quasi rerum illum iusto veritatis maiores rem reiciendis quaerat minus velit, hic aspernatur. Reiciendis. </p>\n"
+  'title': 'Car Details',
+  'page': "\n  <section>\n  <h2>To Do - Car Picture<span>Car Name </h2>\n  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n  magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n  </p>\n  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n  magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n  </p>\n  </section>\n\n  "
 };
 exports.default = _default;
-},{}],"store/About.js":[function(require,module,exports) {
+},{}],"store/CarHelp.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -281,11 +246,107 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _default = {
   'links': {
-    'primary': ['Home', 'About', 'Contact', 'Blog'],
-    'dropdown': ['Project1', 'Project2', 'Project3']
+    'primary': ['Home'],
+    'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
-  'title': 'About Page',
-  'page': "\n   <h2>About Me</h2>\n      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ullam cupiditate, et atque soluta eaque nobis, quasi rerum illum iusto veritatis maiores rem reiciendis quaerat minus velit, hic aspernatur. Reiciendis. </p>\n  "
+  'title': 'Car Help',
+  'page': "\n  <section>\n  <h2>To Do - Car Picture<span>Car Name </h2>\n  <p> To Do: Enter Maintenance topics, Create Link to YouTube video\n  </p>\n  </section>\n\n  "
+};
+exports.default = _default;
+},{}],"store/MaintPrompts.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  'links': {
+    'primary': ['Home'],
+    'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
+  },
+  'title': 'Maintenance Prompts',
+  'page': "\n  <section>\n  <h2>To Do - Car Picture<span>Car Name </h2>\n  <p> To Do: Enter Example Maintenance Prompts, with graphics and rationales \n  </p>\n  </section>\n\n  "
+};
+exports.default = _default;
+},{}],"store/Profile.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  'links': {
+    'primary': ['Home'],
+    'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
+  },
+  'title': 'Driver Profile',
+  'page': "\n  <section>\n  <h2>To Do - driver nickname</h2>\n  <p> To Do: Driver information about preferences adn driving style\n  </p>\n  </section>\n\n  "
+};
+exports.default = _default;
+},{}],"store/Promotion.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  'links': {
+    'primary': ['Home'],
+    'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
+  },
+  'title': 'Promotions',
+  'page': "\n<section>\n<h2>To Do - Logo of Promotion Provider<span>Provider Name </h2>\n<p> To Do: List Sample Promotions being offered\n</p>\n</section>\n"
+};
+exports.default = _default;
+},{}],"store/Providers.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  'links': {
+    'primary': ['Home'],
+    'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
+  },
+  'title': 'Service Providers',
+  'page': "\n<section>\n<h2>To Do - Logo of Service Provider<span>Provider Name </h2>\n<p> To Do: Display Address and Google Rating\n</p>\n<p> To Do: List Maintenance performed at this location\n</p>\n</section>\n\n"
+};
+exports.default = _default;
+},{}],"store/Records.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  'links': {
+    'primary': ['Home'],
+    'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
+  },
+  'title': 'Maintenance Records',
+  'page': "\n  <section>\n  <h2>To Do - Car Picture<span>Car Name </h2>\n  <p> To Do: Enter Maintenance topics, Create Link to YouTube video\n  </p>\n  </section>\n\n  "
+};
+exports.default = _default;
+},{}],"store/Standards.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  'links': {
+    'primary': ['Home'],
+    'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
+  },
+  'title': 'Car Standards',
+  'page': "\n  <section>\n  <h2>To Do - Car Picture<span>Car Name </h2>\n  <p> To Do: Display summary of primary maintenance standards\n  </p>\n  </section>\n\n  "
 };
 exports.default = _default;
 },{}],"store/index.js":[function(require,module,exports) {
@@ -300,55 +361,83 @@ Object.defineProperty(exports, "home", {
     return _Home.default;
   }
 });
-Object.defineProperty(exports, "contact", {
+Object.defineProperty(exports, "car", {
   enumerable: true,
   get: function () {
-    return _Contact.default;
+    return _Car.default;
   }
 });
-Object.defineProperty(exports, "project1", {
+Object.defineProperty(exports, "cardetails", {
   enumerable: true,
   get: function () {
-    return _Projects.project1;
+    return _CarDetails.default;
   }
 });
-Object.defineProperty(exports, "project2", {
+Object.defineProperty(exports, "carhelp", {
   enumerable: true,
   get: function () {
-    return _Projects.project2;
+    return _CarHelp.default;
   }
 });
-Object.defineProperty(exports, "project3", {
+Object.defineProperty(exports, "maintprompts", {
   enumerable: true,
   get: function () {
-    return _Projects.project3;
+    return _MaintPrompts.default;
   }
 });
-Object.defineProperty(exports, "blog", {
+Object.defineProperty(exports, "profile", {
   enumerable: true,
   get: function () {
-    return _Blog.default;
+    return _Profile.default;
   }
 });
-Object.defineProperty(exports, "about", {
+Object.defineProperty(exports, "promotion", {
   enumerable: true,
   get: function () {
-    return _About.default;
+    return _Promotion.default;
+  }
+});
+Object.defineProperty(exports, "providers", {
+  enumerable: true,
+  get: function () {
+    return _Providers.default;
+  }
+});
+Object.defineProperty(exports, "records", {
+  enumerable: true,
+  get: function () {
+    return _Records.default;
+  }
+});
+Object.defineProperty(exports, "standards", {
+  enumerable: true,
+  get: function () {
+    return _Standards.default;
   }
 });
 
 var _Home = _interopRequireDefault(require("./Home"));
 
-var _Contact = _interopRequireDefault(require("./Contact"));
+var _Car = _interopRequireDefault(require("./Car"));
 
-var _Projects = require("./Projects");
+var _CarDetails = _interopRequireDefault(require("./CarDetails"));
 
-var _Blog = _interopRequireDefault(require("./Blog"));
+var _CarHelp = _interopRequireDefault(require("./CarHelp"));
 
-var _About = _interopRequireDefault(require("./About"));
+var _MaintPrompts = _interopRequireDefault(require("./MaintPrompts"));
+
+var _Profile = _interopRequireDefault(require("./Profile"));
+
+var _Promotion = _interopRequireDefault(require("./Promotion"));
+
+var _Providers = _interopRequireDefault(require("./Providers"));
+
+var _Records = _interopRequireDefault(require("./Records"));
+
+var _Standards = _interopRequireDefault(require("./Standards"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Home":"store/Home.js","./Contact":"store/Contact.js","./Projects":"store/Projects.js","./Blog":"store/Blog.js","./About":"store/About.js"}],"node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
+},{"./Home":"store/Home.js","./Car":"store/Car.js","./CarDetails":"store/CarDetails.js","./CarHelp":"store/CarHelp.js","./MaintPrompts":"store/MaintPrompts.js","./Profile":"store/Profile.js","./Promotion":"store/Promotion.js","./Providers":"store/Providers.js","./Records":"store/Records.js","./Standards":"store/Standards.js"}],"node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -2162,7 +2251,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     store.blog.page = blogHTML;
 });
 */
-},{"./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/17136/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/6808/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2190,7 +2279,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62658" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52303" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2365,5 +2454,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/17136/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/6808/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/capstone.e31bb0bc.js.map
