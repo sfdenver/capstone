@@ -24,15 +24,16 @@ body {
     grid-template-rows: minmax(20px, auto) minmax(20px, auto);
     grid-gap: 1px;
     grid-template-areas: 'main' 'aside-1';
-    height: 70vh;
+    height: 100vh;
     color: black;
 }
 
-.container2 {
+.container1 {
     /* template for secondary content pages with no aside */
     display: grid;
+    width: vw;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(20px, auto) minmax(20px, auto) minmax(100pct, auto) minmax(20px, auto);
+    grid-template-rows: 20px 20px minmax(20px, auto) 20px;
     grid-gap: 1px;
     grid-template-areas: 'header' 'navigation' 'main' 'footer';
     height: 100vh;
@@ -41,6 +42,7 @@ body {
 
 header {
     background-color: rgba(113, 154, 216, 1);
+    grid-area: header;
 }
 
 header>div>p {
@@ -89,6 +91,7 @@ nav {
     background: rgba(255, 255, 255, 1);
     padding: 5px 0;
     font-size: 20px;
+    grid-area: navigation;
 }
 
 nav>ul {
@@ -164,8 +167,11 @@ width: 100vw;
 /* Main */
 
 main {
+    grid-area: main;
     display: flex;
     background-color: rgba(54, 65, 129, 1);
+    align-items: stretch;
+    flex-direction: column;
 }
 
 main>section {
@@ -175,7 +181,7 @@ main>section {
     padding: 10px;
 }
 
-main section h2 {
+main section h4 {
     font-wieght: bold;
     text-transform: uppercase;
 }
@@ -185,9 +191,9 @@ main section h2 {
     border-radius: 3px;
     background-color: rgba(255, 255, 255, 1);
     color: black;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    font-size: .5em text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     /* Normally, you should specify which properties to transition. Else, it will do all the 'transition-able' things and that could slow down the page. */
@@ -207,6 +213,7 @@ footer {
     border-top: solid 3px red;
     transform: translateY(-3px);
     padding: 0px 20px;
+    grid-area: footer;
 }
 
 footer li {

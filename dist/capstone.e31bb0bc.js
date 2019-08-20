@@ -156,7 +156,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(state) {
-  return "\n    <header>\n        <div>\n            <p>To Do-luvmyride title</p>\n        </div>\n    </header>\n";
+  return "\n    <header>\n\n        <div>\n            <p>To Do-luvmyride title</p>\n        </div>\n    </header>\n";
 };
 
 exports.default = _default;
@@ -169,7 +169,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(state) {
-  return "\n    <main class=\"maincontainer1\">\n      ".concat(state.page, "\n    </main>\n");
+  return "\n    <main>\n      ".concat(state.page, "\n    </main>\n");
 };
 
 exports.default = _default;
@@ -204,7 +204,7 @@ var _default = {
     'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
   'title': 'This is the home page!',
-  'page': "\n      <section>\n      <h2> Section 1 Header </h2>\n      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n      magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n      reiciendis distinctio,\n      impedit accusantium libero!Iusto mollitia minus ipsam quam laborum!\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Read More!</a>\n      </section>\n\n      <section>\n      <h2> Section 2 Header </h2>\n      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n      magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n      reiciendis distinctio, impedit accusantium libero!Iusto mollitia minus ipsam quam laborum!\n      </p>\n      <a href = \"#\" class = \"cta-btn\" > Read More! </a>\n      </section>\n\n      <section >\n      <h2> Section 3 Header </h2> <\n      p > Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,\n      magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,\n      reiciendis distinctio,\n      impedit accusantium libero!Iusto mollitia minus ipsam quam laborum!\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Read More! </a>\n\n      </section>\n      "
+  'page': "\n    <h3>My Garage!</h3>\n      <section>\n      <h4> Car Nickname </h4>\n      <p> To Do - picture of car<span>To Do - summary of car information (mileage, persona)\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Car Info!</a>\n      <p> To Do - Maintenance Prompts\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Maint. Details</a>\n      </section>\n\n      <section>\n      <h4> Car Nickname </h4>\n      <p> To Do - picture of car<span> To Do - summary of car information (mileage, persona)\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Car Info!</a>\n      <p> To Do - Maintenance Prompts\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Maint. Details</a>\n      </section>\n\n      <section>\n      <h4> Car Nickname </h4>\n      <p> To Do - picture of car<span> To Do - summary of car information (mileage, persona)\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Car Info!</a>\n      <p> To Do - Maintenance Prompts\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Maint. Details</a>\n      </section>\n\n      <h3>Promotions</h3>\n      <section >\n      p > To Do - Marketing Promotion Information\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n      p > To Do - Marketing Promotion Information\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n      </section>\n      "
 };
 exports.default = _default;
 },{}],"store/Car.js":[function(require,module,exports) {
@@ -1415,7 +1415,7 @@ module.exports = function xhrAdapter(config) {
   });
 };
 
-},{"./../utils":"node_modules/axios/lib/utils.js","./../core/settle":"node_modules/axios/lib/core/settle.js","./../helpers/buildURL":"node_modules/axios/lib/helpers/buildURL.js","./../helpers/parseHeaders":"node_modules/axios/lib/helpers/parseHeaders.js","./../helpers/isURLSameOrigin":"node_modules/axios/lib/helpers/isURLSameOrigin.js","../core/createError":"node_modules/axios/lib/core/createError.js","./../helpers/cookies":"node_modules/axios/lib/helpers/cookies.js"}],"../../../AppData/Roaming/npm-cache/_npx/16220/node_modules/parcel/node_modules/process/browser.js":[function(require,module,exports) {
+},{"./../utils":"node_modules/axios/lib/utils.js","./../core/settle":"node_modules/axios/lib/core/settle.js","./../helpers/buildURL":"node_modules/axios/lib/helpers/buildURL.js","./../helpers/parseHeaders":"node_modules/axios/lib/helpers/parseHeaders.js","./../helpers/isURLSameOrigin":"node_modules/axios/lib/helpers/isURLSameOrigin.js","../core/createError":"node_modules/axios/lib/core/createError.js","./../helpers/cookies":"node_modules/axios/lib/helpers/cookies.js"}],"../../../AppData/Roaming/npm-cache/_npx/9956/node_modules/parcel/node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -1725,7 +1725,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-},{"./utils":"node_modules/axios/lib/utils.js","./helpers/normalizeHeaderName":"node_modules/axios/lib/helpers/normalizeHeaderName.js","./adapters/http":"node_modules/axios/lib/adapters/xhr.js","./adapters/xhr":"node_modules/axios/lib/adapters/xhr.js","process":"../../../AppData/Roaming/npm-cache/_npx/16220/node_modules/parcel/node_modules/process/browser.js"}],"node_modules/axios/lib/helpers/isAbsoluteURL.js":[function(require,module,exports) {
+},{"./utils":"node_modules/axios/lib/utils.js","./helpers/normalizeHeaderName":"node_modules/axios/lib/helpers/normalizeHeaderName.js","./adapters/http":"node_modules/axios/lib/adapters/xhr.js","./adapters/xhr":"node_modules/axios/lib/adapters/xhr.js","process":"../../../AppData/Roaming/npm-cache/_npx/9956/node_modules/parcel/node_modules/process/browser.js"}],"node_modules/axios/lib/helpers/isAbsoluteURL.js":[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2253,7 +2253,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     store.blog.page = blogHTML;
 });
 */
-},{"./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/6808/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/9956/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2281,7 +2281,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52303" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53034" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2456,5 +2456,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/6808/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/9956/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/capstone.e31bb0bc.js.map
