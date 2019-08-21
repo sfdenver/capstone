@@ -1,6 +1,5 @@
 export default (state) => `
-    <header>
-
+    <header class='header'>
         <div>
             <p>To Do-luvmyride title</p>
         </div>

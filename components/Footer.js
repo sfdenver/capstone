@@ -1,5 +1,5 @@
 export default (state) => `
-<footer>
+<footer class='footer'>
 <ul>
     <li>
        To Do - logo

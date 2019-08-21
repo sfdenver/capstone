@@ -117,7 +117,20 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"components/Navigation.js":[function(require,module,exports) {
+})({"components/dataStore.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default(state) {
+  return "\n/* \nCommon section to define global data objects\nShort-cut for demo instead of creating datbase\n*/\n\n\n";
+};
+
+exports.default = _default;
+},{}],"components/Navigation.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -132,16 +145,16 @@ function linkBuilder(links) {
   return links.map(function (link) {
     return (
       /**
-                                                                                  An HTML data attribute provides additional information that can be used by JS as a hook.
-                                                                                  In this case, 'navigo' is something that navigo uses to bind the link 'text' to the   Navigo router.
-                                                                                       */
+                                                                                                  An HTML data attribute provides additional information that can be used by JS as a hook.
+                                                                                                  In this case, 'navigo' is something that navigo uses to bind the link 'text' to the   Navigo router.
+                                                                                                       */
       "<li><a href=\"/".concat(link.toLowerCase(), "\"\n        data-navigo>").concat(link, "</a></li>")
     );
   }).join(' ');
 }
 
 var _default = function _default(state) {
-  return "\n<nav>\n    <ul>\n        <li class=\"dropdown\">\n        My Garage\n        <ul>\n            ".concat(linkBuilder(state.links.dropdown), "\n        </ul>\n        </li>\n    </ul>\n  </nav>\n");
+  return "\n<nav class='nav'>\n    <ul>\n        <li class=\"dropdown\">\n        My Garage\n        <ul>\n            ".concat(linkBuilder(state.links.dropdown), "\n        </ul>\n        </li>\n    </ul>\n  </nav>\n");
 };
 /** ${linkBuilder(state.links.primary)} */
 
@@ -156,7 +169,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(state) {
-  return "\n    <header>\n\n        <div>\n            <p>To Do-luvmyride title</p>\n        </div>\n    </header>\n";
+  return "\n    <header class='header'>\n        <div>\n            <p>To Do-luvmyride title</p>\n        </div>\n    </header>\n";
 };
 
 exports.default = _default;
@@ -169,7 +182,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(state) {
-  return "\n    <main>\n      ".concat(state.page, "\n    </main>\n");
+  return "\n    <main class='main'>\n      ".concat(state.page, "\n    </main>\n");
 };
 
 exports.default = _default;
@@ -182,7 +195,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(state) {
-  return "\n<footer>\n<ul>\n    <li>\n       To Do - logo\n    </li>\n    <li>\n      To Do - footer message\n    </li>\n</footer>\n";
+  return "\n<footer class='footer'>\n<ul>\n    <li>\n       To Do - logo\n    </li>\n    <li>\n      To Do - footer message\n    </li>\n</footer>\n";
 };
 
 exports.default = _default;
@@ -204,7 +217,7 @@ var _default = {
     'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
   'title': 'This is the home page!',
-  'page': "\n    <h3>My Garage!</h3>\n      <section>\n      <h4> Car Nickname </h4>\n      <p> To Do - picture of car<span>To Do - summary of car information (mileage, persona)\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Car Info!</a>\n      <p> To Do - Maintenance Prompts\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Maint. Details</a>\n      </section>\n\n      <section>\n      <h4> Car Nickname </h4>\n      <p> To Do - picture of car<span> To Do - summary of car information (mileage, persona)\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Car Info!</a>\n      <p> To Do - Maintenance Prompts\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Maint. Details</a>\n      </section>\n\n      <section>\n      <h4> Car Nickname </h4>\n      <p> To Do - picture of car<span> To Do - summary of car information (mileage, persona)\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Car Info!</a>\n      <p> To Do - Maintenance Prompts\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Maint. Details</a>\n      </section>\n\n      <h3>Promotions</h3>\n      <section >\n      p > To Do - Marketing Promotion Information\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n      p > To Do - Marketing Promotion Information\n      </p>\n      <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n      </section>\n      "
+  'page': "\n    <section class='myGarage'>\n        <section class='cars'>\n          <h3>My Garage!</h3>\n          <section class='carSummary'>\n              <section class='carPic'>\n                  <p> To Do - picture of car</p>;\n              </section>\n              <section class='carName'>\n                  <h4> Car Nickname </h4>\n              </section>\n              <section class='carInfo'>\n                  <p>To Do - summary of car information (mileage, persona)</p>;\n              </section>\n              <section class='maintPrompt'>\n                  <p> To Do - Maintenance Prompts</p>;\n                  <p> To Do - Maintenance Prompts</p>;\n              </section>\n              <section class='link1'>\n                  <a href = \"#\" class = \"cta-btn\" >Car Info!</a>\n              </section>\n              <section class='link2'>\n                  <a href = \"#\" class = \"cta-btn\" >Maint. Details</a>\n              </section>\n          </section>\n\n          <section class='carSummary'>\n              <section class='carPic'>\n                  <p> To Do - picture of car</p>;\n              </section>\n              <section class='carName'>\n                  <h4> Car Nickname </h4>\n              </section>\n              <section class='carInfo'>\n                  <p>To Do - summary of car information (mileage, persona)</p>;\n              </section>\n              <section class='maintPrompt'>\n                  <p> To Do - Maintenance Prompts</p>;\n                  <p> To Do - Maintenance Prompts</p>;\n              </section>\n              <section class='link1'>\n                  <a href = \"#\" class = \"cta-btn\" >Car Info!</a>\n              </section>\n              <section class='link2'>\n                  <a href = \"#\" class = \"cta-btn\" >Maint. Details</a>\n              </section>\n          </section>\n\n          <section class='carSummary'>\n              <section class='carPic'>\n                  <p> To Do - picture of car</p>;\n              </section>\n              <section class='carName'>\n                  <h4> Car Nickname </h4>\n              </section>\n              <section class='carInfo'>\n                  <p>To Do - summary of car information (mileage, persona)</p>;\n              </section>\n              <section class='maintPrompt'>\n                  <p> To Do - Maintenance Prompts</p>;\n                  <p> To Do - Maintenance Prompts</p>;\n              </section>\n              <section class='link1'>\n                  <a href = \"#\" class = \"cta-btn\" >Car Info!</a>\n              </section>\n              <section class='link2'>\n                  <a href = \"#\" class = \"cta-btn\" >Maint. Details</a>\n              </section>\n          </section>\n        </section>\n\n        <section class='promotions'>\n            <h3>Promotions</h3>\n            <section >\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n            </section>\n        </section>\n    </section>\n\n      "
 };
 exports.default = _default;
 },{}],"store/Car.js":[function(require,module,exports) {
@@ -2155,6 +2168,8 @@ module.exports = require('./lib/axios');
 },{"./lib/axios":"node_modules/axios/lib/axios.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
+var _dataStore = _interopRequireDefault(require("./components/dataStore"));
+
 var _Navigation = _interopRequireDefault(require("./components/Navigation"));
 
 var _Header = _interopRequireDefault(require("./components/Header"));
@@ -2173,6 +2188,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import dataStore first to ensure global data are defined before used
 // import Navigo constructor function from the node 'navigo'
 console.log('Store came in as ', store);
 // import { Http2SecureServer } from 'http2';
@@ -2181,7 +2197,7 @@ var router = new _navigo.default(location.origin);
 function render(state) {
   // functions are invoked to return the results for each
   console.log('render using state = ', state);
-  document.querySelector('#root').innerHTML = "\n      ".concat((0, _Header.default)(state), "\n      ").concat((0, _Navigation.default)(state), "\n      ").concat((0, _Main.default)(state), "\n      ").concat((0, _Footer.default)(state), "\n    "); // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
+  document.querySelector('#root').innerHTML = "\n      ".concat((0, _dataStore.default)(state), "\n      ").concat((0, _Header.default)(state), "\n      ").concat((0, _Navigation.default)(state), "\n      ").concat((0, _Main.default)(state), "\n      ").concat((0, _Footer.default)(state), "\n    "); // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
 
   router.updatePageLinks();
 } // testing line:  console.log('state came in as ' + state);
@@ -2253,7 +2269,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     store.blog.page = blogHTML;
 });
 */
-},{"./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/9956/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/dataStore":"components/dataStore.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/11036/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2281,7 +2297,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53034" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61905" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2456,5 +2472,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/9956/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/11036/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/capstone.e31bb0bc.js.map

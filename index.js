@@ -1,3 +1,5 @@
+// import dataStore first to ensure global data are defined before used
+import dataStore from './components/dataStore';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Main from './components/Main';
@@ -15,11 +17,13 @@ function render(state){
     // functions are invoked to return the results for each
     console.log('render using state = ', state);
     document.querySelector('#root').innerHTML = `
+      ${dataStore(state)}
       ${Header(state)}
       ${Navigation(state)}
       ${Main(state)}
       ${Footer(state)}
     `;
+
     // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
     router.updatePageLinks();
 }
