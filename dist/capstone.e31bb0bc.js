@@ -137,6 +137,175 @@ var owner = {
   '	promptStyle	 ': '	Drill Sergeant	 ',
   '	maintStyle	 ': '	Close enough	 '
 };
+var driveStyle = [{
+  'id': 1,
+  'style': 'Careful',
+  'driveFactor': 1.25
+}, {
+  'id': 2,
+  'style': 'Steady',
+  'driveFactor': 1
+}, {
+  'id': 3,
+  'style': 'Charge',
+  'driveFactor': 0.75
+}, {
+  'id': 4,
+  'style': 'Woah!',
+  'driveFactor': 0.5
+}, {
+  'id': 5,
+  'style': 'Backcountry',
+  'driveFactor': 0.65
+}];
+var maintStyle = [{
+  'id': 1,
+  'style': 'Early',
+  'maintFactor': 0.8
+}, {
+  'id': 2,
+  'style': 'On Time',
+  'maintFactor': 1.0
+}, {
+  'id': 3,
+  'style': 'Close Enough',
+  'maintFactor': 1.2
+}, {
+  'id': 4,
+  'style': 'Late as Possible',
+  'maintFactor': 1.5
+}, {
+  'id': 5,
+  'style': 'When It Breaks',
+  'maintFactor ': 3.0
+}];
+var promptStyle = [{
+  'id': 1,
+  'style': 'Polite',
+  'maintMessage': [{
+    'id': 1,
+    'Heads-up': 'Heads-up, important service needed soon!'
+  }, {
+    'id': 2,
+    'Nudge': 'Nudging you, important maintenance now needed!'
+  }, {
+    'id': 3,
+    'Warning': 'Warning! important service overdue!'
+  }, {
+    'id': 4,
+    'Strong Warning': 'Very Urgent, important service seriously overdue!'
+  }, {
+    'id': 5,
+    'Hopeless': 'Your car may break, important service hopelessly overdue!'
+  }]
+}, {
+  'id': 2,
+  'style': 'Whine',
+  'maintMessage': [{
+    'id': 1,
+    'Heads-up': 'Heads-up, important service needed soon!'
+  }, {
+    'id': 2,
+    'Nudge': 'Nudging you, important maintenance now needed!'
+  }, {
+    'id': 3,
+    'Warning': 'Warning! important service overdue!'
+  }, {
+    'id': 4,
+    'Strong Warning': 'Very Urgent, important service seriously overdue!'
+  }, {
+    'id': 5,
+    'Hopeless': 'Your car may break, important service hopelessly overdue!'
+  }]
+}, {
+  'id': 3,
+  'style': 'HAL',
+  'maintMessage': [{
+    'id': 1,
+    'Heads-up': 'Heads-up, important service needed soon!'
+  }, {
+    'id': 2,
+    'Nudge': 'Nudging you, important maintenance now needed!'
+  }, {
+    'id': 3,
+    'Warning': 'Warning! important service overdue!'
+  }, {
+    'id': 4,
+    'Strong Warning': 'Very Urgent, important service seriously overdue!'
+  }, {
+    'id': 5,
+    'Hopeless': 'Your car may break, important service hopelessly overdue!'
+  }]
+}, {
+  'id': 4,
+  'style': 'Drill Sergeant',
+  'maintMessage': [{
+    'id': 1,
+    'Heads-up': 'Are you sleepy? Time to wake up and get ready! Important service needed soon!'
+  }, {
+    'id': 2,
+    'Nudge': 'What are you doing - taking a nap? Get off your A** and move it. Important maintenance now needed!'
+  }, {
+    'id': 3,
+    'Warning': 'ARE YOU HEARING THIS! YOUR CAR SERVICE IS LONG OVERDUE!'
+  }, {
+    'id': 4,
+    'Strong Warning': 'YOU ARE FRIGGING KIDDING ME. GROW UP AND GET THIS DONE NOW! RIGHT NOW! YOUR ARE SERIOUSLY OVERDUE!'
+  }, {
+    'id': 5,
+    'Hopeless': 'MAGGOT - YOU HOPELESS PIECE OF S**T. YOUR CAR IS FALLING APART. YOU ARE PATHETIC. NOBODY BUT A BABY IGNORES THEIR CAR THIS LONG. GET MOVING AND FIX YOUR CAR!'
+  }]
+}, {
+  'id': 1,
+  'style': 'Insult',
+  'maintMessage': [{
+    'id': 1,
+    'Heads-up': 'Hey Pea Brain, your car needs service soon - start now and you might be on time!'
+  }, {
+    'id': 2,
+    'Nudge': 'Knucklehead - I told you it was coming. Important maintenance now needed!'
+  }, {
+    'id': 3,
+    'Warning': 'What is wrong with you! Important service is overdue! Get it fixed now'
+  }, {
+    'id': 4,
+    'Strong Warning': 'Last chance! Your car is better than you! VERY URGENT SERVICE LONG OVERDUE!'
+  }, {
+    'id': 5,
+    'Hopeless': 'You may be worthless, and so will your car. It may not matter anymore. Critical service is hopelessly overdue!'
+  }]
+}];
+var promoAvailable = [{
+  'id': 1,
+  'serviceCategory': 'Brakes',
+  'promoProvider': 'Plaza Infinity',
+  'message': 'We are Infinty repair experts - give us a try. Special on brake service! 20% Off until Sept. 30, 2019.',
+  'promoDetails': 'placeholder for image or url reference'
+}, {
+  'id': 2,
+  'serviceCategory': 'Oil Change',
+  'promoProvider': 'Plaza Infinity',
+  'message': 'Convenient oil change while you wait! Synthetic Oil change for your Infinity for $39.95 every day',
+  'promoDetails': 'placeholder for image or url reference'
+}, {
+  'id': 3,
+  'serviceCategory': 'Brakes',
+  'promoProvider': 'Precision Auto Repair',
+  'message': 'Special for our favorite customers. Special for Brake discs and rotars 25% Off until Nov. 1, 2019.',
+  'promoDetails': 'placeholder for image or url reference'
+}, {
+  'id': 4,
+  'serviceCategory': 'Brakes',
+  'promoProvider': 'Raymond Exotic Car Repair',
+  'message': 'Specialists for your sports car! High Performance Brake special 30% off until Oct. 19, 2019.',
+  'promoDetails': 'placeholder for image or url reference'
+}, {
+  'id': 5,
+  'serviceCategory': 'Oil Change',
+  'promoProvider': 'Precision Auto Repair',
+  'message': 'Special for our favorite customers. Synthetic Oil change $34.99! Drop-off or while you wait!',
+  'promoDetails': 'placeholder for image or url reference'
+}];
 
 var _default = function _default(state, ref) {
   return ' ';
@@ -2308,7 +2477,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     store.blog.page = blogHTML;
 });
 */
-},{"./components/dataStore":"components/dataStore.js","./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/14260/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/dataStore":"components/dataStore.js","./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/2244/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2336,7 +2505,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53322" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58400" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2511,5 +2680,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/14260/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/2244/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/capstone.e31bb0bc.js.map
