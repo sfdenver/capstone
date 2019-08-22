@@ -1,5 +1,6 @@
 // import dataStore first to ensure global data are defined before used
 import dataStore from './components/dataStore';
+import maintCalc from './components/maintCalc';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Main from './components/Main';
@@ -19,6 +20,7 @@ function render(state){
     console.log('render using state = ', state);
     document.querySelector('#root').innerHTML = `
       ${dataStore(state, ref)}
+      ${maintCalc(state, ref)}
       ${Header(state, ref)}
       ${Navigation(state, ref)}
       ${Main(state, ref)}

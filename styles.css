@@ -17,9 +17,12 @@ body {
     font-size: 20px;
 }
 
+
+/*
 p {
     margin 0 0 0 0;
 }
+*/
 
 
 /* Main page container  */
@@ -27,7 +30,7 @@ p {
 .container1 {
     display: grid;
     grid-template-columns: 10% 1fr;
-    grid-template-rows: 10% 1fr 10%;
+    grid-template-rows: 10% 80% 10%;
     grid-template-areas: "nav header" "main main" "footer footer";
     width: 100vw;
     grid-gap: 0px;
@@ -45,7 +48,7 @@ p {
     display: flex;
     background-color: rgba(113, 154, 216, 1);
     margin: 0px 0px 0px 0px;
-    font-size: 20px;
+    font-size: 50px;
     font-style: italic;
     color: rgba(163, 11, 55, 1);
     display: flex;
@@ -54,11 +57,6 @@ p {
     justify-content: space-evenly;
     align-items: stretch;
     align-content: center;
-}
-
-.header>div>h2 {
-    margin: 0px 0px 0px 0px;
-    color: rgba(163, 11, 55, 1);
 }
 
 .main {
@@ -72,32 +70,45 @@ p {
 
 .footer {
     grid-area: footer;
-    border-top: solid 3px red;
-    transform: translateY(-3px);
-    padding: 0px 20px;
-    flex-direction: row;
-    align-items: stretch;
-}
-
-.footer>Section {
     display: flex;
+    border-top: solid 3px red;
+    padding: 0px 20px;
+    background-color: rgba(113, 154, 216, 1);
+    margin: 0px 0px 0px 0px;
+    font-size: 30px;
+    font-style: italic;
+    color: rgba(163, 11, 55, 1);
     flex-direction: row;
+    justify-content: space-evenly;
     align-items: stretch;
+    align-content: center;
 }
 
 
 /* Grid for Home Page */
 
-.myGarage {
+.homeGrid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 70% 30%;
-    grid-template-areas: "cars" "promotions";
+    grid-template-rows: 300px 70% 30%;
+    grid-template-areas: "carPic" "maintMessage" "promotions";
+    padding: 20px;
 }
 
-.cars {
-    grid-area: cars;
+.carPic {
+    grid-area: carPic;
     background-color: rgba(54, 65, 129, 1);
+    display: flex;
+    flex-direction: column;
+    background-image: url(./Data/car1.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.maintMessage {
+    grid-area: maintMessage;
+    background-color: rgba(178, 200, 233, 1);
     display: flex;
     flex-direction: column;
 }
@@ -110,64 +121,7 @@ p {
 }
 
 
-/* Grid for a Car Summary */
-
-.carSummary {
-    display: grid;
-    grid-template-columns: 100px 1fr 75px 75px;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "carPic carName link1 link2" "carPic carInfo link1 link2" "carPic maintPrompt link1 link2";
-    background-color: rgba(178, 200, 233, 1);
-}
-
-.carPic {
-    grid-area: carPic;
-    font-size: 10px;
-}
-
-.carName {
-    grid-area: carName;
-    font-size: 10px;
-}
-
-.maintPrompt {
-    grid-area: maintPrompt;
-    font-size: 10px;
-}
-
-.carInfo {
-    grid-area: carInfo;
-    font-size: 10px;
-}
-
-.link1 {
-    grid-area: link1;
-    font-size: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.link2 {
-    grid-area: link2;
-    font-size: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
 /* default styles for html */
-
-header>div>p {
-    background-color: rgba(113, 154, 216, 1);
-    height: 20px;
-    font-size-adjust: 15px;
-    color: rgba(163, 11, 55, 1);
-    padding: 0;
-    margin: 0;
-    position: left;
-}
 
 ul {
     padding: 0;
@@ -211,7 +165,8 @@ nav>ul {
     display: flex;
     justify-content: space-around;
     justify-items: left;
-    position: : padding: 5px 0px;
+    position: relative;
+    padding: 5px 0px;
     margin: 0px 0px;
     font-size: 20px;
 }
@@ -251,7 +206,8 @@ nav>ul>li {
     color: black;
     margin: 5px;
     padding: 5px;
-    font-size: .5em text-align: center;
+    font-size: .5em;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     /* Normally, you should specify which properties to transition. Else, it will do all the 'transition-able' things and that could slow down the page. */
@@ -269,13 +225,9 @@ nav>ul>li {
 
 .car {
     display: grid;
-    grid-template-columns: 150px 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: 200px 1fr 150px;
-    grid-template-areas: "carPic carInfo" "carHistory carHistory" "maintLinks maintLinks";
-}
-
-.carPic {
-    grid-area: carPic;
+    grid-template-areas: "carInfo" "carHistory " "maintLinks";
 }
 
 .carInfo {

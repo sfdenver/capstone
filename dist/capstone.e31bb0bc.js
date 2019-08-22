@@ -132,12 +132,35 @@ Short-cut for demo instead of creating database
 var owner = {
   '	ID	 ': 1,
   '	name	 ': '	Robert Bruce	 ',
-  '	nickname	 ': '	Bubba	 ',
+  '	nickname	 ': '	Bubba Bruce	 ',
   '	driveStyle	 ': '	Charge	 ',
   '	promptStyle	 ': '	Drill Sergeant	 ',
   '	maintStyle	 ': '	Close enough	 '
 };
 
+var _default = function _default(state, ref) {
+  return ' ';
+};
+
+exports.default = _default;
+},{}],"components/maintCalc.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+/* Common section to calculate maintenance requirements and messages */
+
+/*
+Steps:
+1. Adjust standards based on Driving style
+2. Calculate status of maintenance based on history
+    and current date and mileage compared to adjusted standards
+3. Identify Urgency for each maintenance item based on Maintenance Style
+4. Select Prompt message based on Urgency and Prompt Preference
+*/
 var _default = function _default(state, ref) {
   return ' ';
 };
@@ -182,7 +205,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(state, ref) {
-  return "\n    <header class='header'>\n        \n            <p><strong>Bubba</strong></p>\n            <p><strong>luvmyride!</strong></p>\n        \n    </header>\n";
+  return "\n    <header class='header'>\n            <p><strong> $[owner.nickname] </strong></p>\n    </header>\n";
 };
 
 exports.default = _default;
@@ -208,7 +231,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(state, ref) {
-  return "\n<footer class='footer'>\n  <section>\n    <p>LOGO</p>\n  </section>  \n  <section>\n    <p>copyright 2019</p>\n  </section>  \n</footer>\n";
+  return "\n<footer class='footer'>\n    <h2>luvmyride.com</h2>\n    <h2>copyright 2019</h2>\n</footer>\n";
 };
 
 exports.default = _default;
@@ -230,7 +253,7 @@ var _default = {
     'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
   'title': 'This is the home page!',
-  'page': "\n    <section class='myGarage'>\n        <section class='cars'>\n          <h3>My Garage!</h3>\n          <section class='carSummary'>\n              <section class='carPic'>\n                  <p> To Do - picture of car</p>;\n              </section>\n              <section class='carName'>\n                  <h4> Car 1 </h4>\n              </section>\n              <section class='carInfo'>\n                  <p>To Do - summary of car information (mileage, persona)</p>;\n              </section>\n              <section class='maintPrompt'>\n                  <p> To Do - Maintenance Prompts</p>;\n                  <p> To Do - Maintenance Prompts</p>;\n              </section>\n              <section class='link1'>\n                  <a href = \"#\" class = \"cta-btn\" >Car Info!</a>\n              </section>\n              <section class='link2'>\n                  <a href = \"#\" class = \"cta-btn\" >Maint. Details</a>\n              </section>\n          </section>\n\n          <section class='carSummary'>\n              <section class='carPic'>\n                  <p> To Do - picture of car</p>;\n              </section>\n              <section class='carName'>\n                  <h4> Car 2 </h4>\n              </section>\n              <section class='carInfo'>\n                  <p>To Do - summary of car information (mileage, persona)</p>;\n              </section>\n              <section class='maintPrompt'>\n                  <p> To Do - Maintenance Prompts</p>;\n                  <p> To Do - Maintenance Prompts</p>;\n              </section>\n              <section class='link1'>\n                  <a href = \"#\" class = \"cta-btn\" >Car Info!</a>\n              </section>\n              <section class='link2'>\n                  <a href = \"#\" class = \"cta-btn\" >Maint. Details</a>\n              </section>\n          </section>\n\n          <section class='carSummary'>\n              <section class='carPic'>\n                  <p> To Do - picture of car</p>;\n              </section>\n              <section class='carName'>\n                  <h4> Car 3 </h4>\n              </section>\n              <section class='carInfo'>\n                  <p>To Do - summary of car information (mileage, persona)</p>;\n              </section>\n              <section class='maintPrompt'>\n                  <p> To Do - Maintenance Prompts</p>;\n                  <p> To Do - Maintenance Prompts</p>;\n              </section>\n              <section class='link1'>\n                  <a href = \"#\" class = \"cta-btn\" >Car Info!</a>\n              </section>\n              <section class='link2'>\n                  <a href = \"#\" class = \"cta-btn\" >Maint. Details</a>\n              </section>\n          </section>\n        </section>\n\n        <section class='promotions'>\n            <h3>Promotions</h3>\n            <section >\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n            </section>\n        </section>\n    </section>\n\n      "
+  'page': "\n    <section class='homeGrid'>\n        <section class='carPic'>\n            <p> To Do - picture of car</p>\n        </section>\n        <section class='maintMessage'>\n            <p> To Do - Maintenance Prompts</p>\n            <p> To Do - Maintenance Prompts</p>\n        </section>\n        <section class='promotions'>\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n        </section>\n    </section>\n\n      "
 };
 exports.default = _default;
 },{}],"store/Car.js":[function(require,module,exports) {
@@ -2183,6 +2206,8 @@ module.exports = require('./lib/axios');
 
 var _dataStore = _interopRequireDefault(require("./components/dataStore"));
 
+var _maintCalc = _interopRequireDefault(require("./components/maintCalc"));
+
 var _Navigation = _interopRequireDefault(require("./components/Navigation"));
 
 var _Header = _interopRequireDefault(require("./components/Header"));
@@ -2211,7 +2236,7 @@ var ref = '';
 function render(state) {
   // functions are invoked to return the results for each
   console.log('render using state = ', state);
-  document.querySelector('#root').innerHTML = "\n      ".concat((0, _dataStore.default)(state, ref), "\n      ").concat((0, _Header.default)(state, ref), "\n      ").concat((0, _Navigation.default)(state, ref), "\n      ").concat((0, _Main.default)(state, ref), "\n      ").concat((0, _Footer.default)(state, ref), "\n    "); // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
+  document.querySelector('#root').innerHTML = "\n      ".concat((0, _dataStore.default)(state, ref), "\n      ").concat((0, _maintCalc.default)(state, ref), "\n      ").concat((0, _Header.default)(state, ref), "\n      ").concat((0, _Navigation.default)(state, ref), "\n      ").concat((0, _Main.default)(state, ref), "\n      ").concat((0, _Footer.default)(state, ref), "\n    "); // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
 
   router.updatePageLinks();
 } // testing line:  console.log('state came in as ' + state);
@@ -2283,7 +2308,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     store.blog.page = blogHTML;
 });
 */
-},{"./components/dataStore":"components/dataStore.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/12616/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/dataStore":"components/dataStore.js","./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/14260/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2311,7 +2336,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54859" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53322" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2486,5 +2511,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/12616/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/14260/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/capstone.e31bb0bc.js.map
