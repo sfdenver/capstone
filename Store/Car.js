@@ -3,41 +3,30 @@ export default {
         'primary': [ 'Home' ],
         'dropdown': [ 'Home', 'Car', 'MaintPrompt', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards' ]
     },
-    'title': 'Car Summary',
+    'title': 'Car Details',
     'page': `
-    <section>
-    <h2>To Do - Car Picture<span>Car Name </h2>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,
-    magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,
-    </p>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,
-    magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,
-    </p>
-    <a href = "#" class = "cta-btn" >Car Details</a>
+    <section class='carPage'>
+      <section class='carPic'>
+        <p> To Do - picture of car</p>;
+      </section>
+      <section class='carInfo'>
+        <p>To Do - summary of car information (mileage, persona)</p>;
+      </section>
+      <section class='carHistory'>
+        <section class='maintPrompt'>
+          <p> To Do - Maintenance Prompts</p>;
+          <p> To Do - Maintenance Prompts</p>;
+        </section>
+        <section class='link1'>
+          <a href = "#" class = "cta-btn" >Car Info!</a>
+        </section>
+        <section class='link2'>
+           <a href = "#" class = "cta-btn" >Maint. Details</a>
+        </section>
+      </section>
+      <section class='maintLinks'>
+        <p>To Do - new class for Car Summary Page</p>
+      </section>
     </section>
-
-    <section>
-    <h2> Maintenance Records</h2>
-    <h3> To Do - Date, Provider</h3>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,
-    magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,
-    reiciendis distinctio, impedit accusantium libero!Iusto mollitia minus ipsam quam laborum!
-    </p>
-    <a href = "#" class = "cta-btn" >Service Details</a>
-    </section>
-
-    <section >
-    <h2> Section 3 Header </h2> <
-    p > Lorem ipsum dolor sit amet consectetur adipisicing elit.Provident,
-    magnam numquam corporis repudiandae porro tempore rerum dolores vitae dicta,
-    reiciendis distinctio,
-    impedit accusantium libero!Iusto mollitia minus ipsam quam laborum!
-    </p>
-    </section>
-
-    <section >
-    <a href = "#" class = "cta-btn" >Maintenance Help</a>
-    <a href = "#" class = "cta-btn" >Maintenance Standards</a>
-    </section>
-    `
+`
 };

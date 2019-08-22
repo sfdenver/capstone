@@ -11,11 +11,16 @@ $color5: rgba(163, 11, 55, 1);
 /* set default styles for all pages */
 
 body {
-    background-color: rgba(54, 65, 129, 1);
+    background-color: rgba(113, 154, 216, 1);
     color: rgba(178, 200, 233, 1);
     font-family: "Noto Sans HK", sans-serif;
     font-size: 20px;
 }
+
+p {
+    margin 0 0 0 0;
+}
+
 
 /* Main page container  */
 
@@ -30,64 +35,129 @@ body {
     color: black;
 }
 
-.main {
-    grid-area: main;
-}
-
-.footer {
-    grid-area: footer;
-}
-
 .nav {
     grid-area: nav;
+    background: rgba(255, 255, 255, 1);
 }
 
 .header {
     grid-area: header;
+    display: flex;
+    background-color: rgba(113, 154, 216, 1);
+    margin: 0px 0px 0px 0px;
+    font-size: 20px;
+    font-style: italic;
+    color: rgba(163, 11, 55, 1);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: center;
 }
+
+.header>div>h2 {
+    margin: 0px 0px 0px 0px;
+    color: rgba(163, 11, 55, 1);
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(113, 154, 216, 1);
+    margin: 0px 0px 0px 0px;
+    align-items: stretch;
+}
+
+.footer {
+    grid-area: footer;
+    border-top: solid 3px red;
+    transform: translateY(-3px);
+    padding: 0px 20px;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.footer>Section {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
 
 /* Grid for Home Page */
 
 .myGarage {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 70% 30%;
-  grid-template-areas: "cars" "promotions";
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: "cars" "promotions";
 }
 
-.cars { grid-area: cars; }
+.cars {
+    grid-area: cars;
+    background-color: rgba(54, 65, 129, 1);
+    display: flex;
+    flex-direction: column;
+}
 
-.promotions { grid-area: promotions; }
+.promotions {
+    grid-area: promotions;
+    background-color: rgba(178, 200, 233, 1);
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* Grid for a Car Summary */
 
 .carSummary {
-  display: grid;
-  grid-template-columns: 500px 1fr 75px 75px;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "carPic carName link1 link2" "carPic carInfo link1 link2" "carPic maintPrompt link1 link2";
+    display: grid;
+    grid-template-columns: 100px 1fr 75px 75px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "carPic carName link1 link2" "carPic carInfo link1 link2" "carPic maintPrompt link1 link2";
+    background-color: rgba(178, 200, 233, 1);
 }
 
-.carPic { grid-area: carPic; }
+.carPic {
+    grid-area: carPic;
+    font-size: 10px;
+}
 
-.carName { grid-area: carName; }
+.carName {
+    grid-area: carName;
+    font-size: 10px;
+}
 
-.maintPrompt { grid-area: maintPrompt; }
+.maintPrompt {
+    grid-area: maintPrompt;
+    font-size: 10px;
+}
 
-.carInfo { grid-area: carInfo; }
+.carInfo {
+    grid-area: carInfo;
+    font-size: 10px;
+}
 
-.link1 { grid-area: link1; }
+.link1 {
+    grid-area: link1;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-.link2 { grid-area: link2; }
+.link2 {
+    grid-area: link2;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 
 /* default styles for html */
-
-
-header {
-    background-color: rgba(113, 154, 216, 1);
-    grid-area: header;
-}
 
 header>div>p {
     background-color: rgba(113, 154, 216, 1);
@@ -97,10 +167,6 @@ header>div>p {
     padding: 0;
     margin: 0;
     position: left;
-}
-
-aside {
-    background-color: rgba(178, 200, 233, 1):
 }
 
 ul {
@@ -131,12 +197,15 @@ section {
 
 /* Navigation section */
 
+
+/*
 nav {
     background: rgba(255, 255, 255, 1);
     padding: 5px 0;
     font-size: 20px;
     grid-area: navigation;
 }
+*/
 
 nav>ul {
     display: flex;
@@ -159,6 +228,7 @@ nav>ul>li {
     position: absolute;
     box-shadow: 3px 5px 5px darkgrey;
     padding: 8px;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 
@@ -171,64 +241,8 @@ nav>ul>li {
 }
 
 
-/* Hero section */
-
-
-/* save original version
-header,
-header div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-
-header {
-    height: 20vh;
-    background-image: url(https://picsum.photos/900/560?grayscale);
-background-repeat: no-repeat;
-background-position: top center;
-    background: url(https://picsum.photos/900/560?grayscale) no-repeat top center;
-    background-size: cover;
-}
-
-header div {
-    background: rgba(255, 248, 220, 0.5);
-    width: 100%;
-    font-size: 15px;
-    height: 100%;
-}
+/* buttons for navigation
 */
-
-
-/* attempt to convert banner to a  - not working yet
-.banner {
-background: cornsilk 0.5;
-width: 100vw;
-} */
-
-
-/* Main */
-
-main {
-    grid-area: main;
-    display: flex;
-    background-color: rgba(54, 65, 129, 1);
-    align-items: stretch;
-    flex-direction: column;
-}
-
-main>section {
-    background-color: rgba(255, 255, 255, 1);
-    color: black;
-    margin: 10px;
-    padding: 10px;
-}
-
-main section h4 {
-    font-wieght: bold;
-    text-transform: uppercase;
-}
 
 .cta-btn {
     display: inline-block;
@@ -251,8 +265,58 @@ main section h4 {
 }
 
 
+/*  styles for Car History page*/
+
+.car {
+    display: grid;
+    grid-template-columns: 150px 100%;
+    grid-template-rows: 200px 1fr 150px;
+    grid-template-areas: "carPic carInfo" "carHistory carHistory" "maintLinks maintLinks";
+}
+
+.carPic {
+    grid-area: carPic;
+}
+
+.carInfo {
+    grid-area: carInfo;
+}
+
+.carHistory {
+    grid-area: carHistory;
+}
+
+.maintLinks {
+    grid-area: maintLinks;
+}
+
+
+/* Grid for Car History Items*/
+
+.CarHistoryItem {
+    display: grid;
+    grid-template-columns: 1fr 150px 150px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "CarHistorySummary Link3 Link4";
+}
+
+.CarHistorySummary {
+    grid-area: CarHistorySummary;
+}
+
+.Link3 {
+    grid-area: Link3;
+}
+
+.Link4 {
+    grid-area: Link4;
+}
+
+
 /*  Footer */
 
+
+/*
 footer {
     border-top: solid 3px red;
     transform: translateY(-3px);
@@ -263,6 +327,7 @@ footer {
 footer li {
     display: inline-block;
 }
+*/
 
 
 /*  Contact Page form  */
@@ -303,6 +368,62 @@ input [type="checkbox"] {
 }
 
 
+/* Hero section */
+
+
+/* save original version
+header,
+header div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    height: 20vh;
+    background-image: url(https://picsum.photos/900/560?grayscale);
+background-repeat: no-repeat;
+background-position: top center;
+    background: url(https://picsum.photos/900/560?grayscale) no-repeat top center;
+    background-size: cover;
+}
+
+header div {
+    background: rgba(255, 248, 220, 0.5);
+    width: 100%;
+    font-size: 15px;
+    height: 100%;
+}
+*/
+
+
+/* Main */
+
+
+/*
+main {
+    grid-area: main;
+    display: flex;
+    background-color: rgba(54, 65, 129, 1);
+    align-items: stretch;
+    flex-direction: column;
+}
+
+main>section {
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+    margin: 10px;
+    padding: 10px;
+}
+
+main section h4 {
+    font-wieght: bold;
+    text-transform: uppercase;
+}
+*/
+
+
 /* styles for responsive formatting */
 
 
@@ -311,6 +432,8 @@ input [type="checkbox"] {
 
 /* needs to be refactored to not overlap previous style statement */
 
+
+/*
 footer {
     display: flex;
     align-items: center;
@@ -337,19 +460,17 @@ address {
     height: 100vh;
     color: black;
 }
+*/
 
 
 /* box border to assist troublshooting  - remove for final version */
 
-
-/*
 nav,
 header,
 main,
 aside,
 footer {
-  border: solid thin black;
+    border: solid thin black;
 }
-*/
 
 /*# sourceMappingURL=/styles.8986bff4.css.map */

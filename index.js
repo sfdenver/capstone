@@ -12,16 +12,17 @@ import Axios from 'axios';
 // import { Http2SecureServer } from 'http2';
 
 const router = new Navigo(location.origin);
+const ref = '';
 
 function render(state){
     // functions are invoked to return the results for each
     console.log('render using state = ', state);
     document.querySelector('#root').innerHTML = `
-      ${dataStore(state)}
-      ${Header(state)}
-      ${Navigation(state)}
-      ${Main(state)}
-      ${Footer(state)}
+      ${dataStore(state, ref)}
+      ${Header(state, ref)}
+      ${Navigation(state, ref)}
+      ${Main(state, ref)}
+      ${Footer(state, ref)}
     `;
 
     // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component

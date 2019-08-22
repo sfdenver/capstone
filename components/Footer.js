@@ -1,11 +1,10 @@
-export default (state) => `
+export default (state, ref) => `
 <footer class='footer'>
-<ul>
-    <li>
-       To Do - logo
-    </li>
-    <li>
-      To Do - footer message
-    </li>
+  <section>
+    <p>LOGO</p>
+  </section>  
+  <section>
+    <p>copyright 2019</p>
+  </section>  
 </footer>
 `;

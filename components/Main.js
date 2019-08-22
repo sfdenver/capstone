@@ -1,4 +1,4 @@
-export default (state) => `
+export default (state, ref) => `
     <main class='main'>
       ${state.page}
     </main>

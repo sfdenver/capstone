@@ -1,7 +1,8 @@
-export default (state) => `
+export default (state, ref) => `
     <header class='header'>
-        <div>
-            <p>To Do-luvmyride title</p>
-        </div>
+        
+            <p><strong>Bubba</strong></p>
+            <p><strong>luvmyride!</strong></p>
+        
     </header>
 `;

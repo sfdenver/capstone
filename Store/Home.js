@@ -13,7 +13,7 @@ export default {
                   <p> To Do - picture of car</p>;
               </section>
               <section class='carName'>
-                  <h4> Car Nickname </h4>
+                  <h4> Car 1 </h4>
               </section>
               <section class='carInfo'>
                   <p>To Do - summary of car information (mileage, persona)</p>;
@@ -35,7 +35,7 @@ export default {
                   <p> To Do - picture of car</p>;
               </section>
               <section class='carName'>
-                  <h4> Car Nickname </h4>
+                  <h4> Car 2 </h4>
               </section>
               <section class='carInfo'>
                   <p>To Do - summary of car information (mileage, persona)</p>;
@@ -57,7 +57,7 @@ export default {
                   <p> To Do - picture of car</p>;
               </section>
               <section class='carName'>
-                  <h4> Car Nickname </h4>
+                  <h4> Car 3 </h4>
               </section>
               <section class='carInfo'>
                   <p>To Do - summary of car information (mileage, persona)</p>;
