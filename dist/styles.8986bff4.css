@@ -23,13 +23,34 @@ section,
     border: solid thin black;
 }
 
-
-/* set default styles for all pages */
-
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400|Heebo:400');
 html {
-    font-size: 16px;
+    /*font-size: 16px;
+    */
 }
+
+
+/* 1em @ 48em (768px) increasing to 2em @ 120em (1920px) */
+
+@media (min-width: 48rem) {
+     :root {
+        font-size: calc(1rem + ((1vw - .48rem) * 1.389));
+        /* .48rem = viewportWidthMinimum /100 */
+        /* 1.389rem = 100 * fontSizeDifference / viewportWidthDifference */
+    }
+}
+
+
+/* Stop font scaling above 1920px */
+
+@media (min-width: 120em) {
+     :root {
+        font-size: 2rem;
+    }
+}
+
+
+/* set default styles for all pages */
 
 body {
     background-color: white;
@@ -40,7 +61,8 @@ body {
 }
 
 p {
-    margin-bottom: 1.25em;
+    font-size: 1rem;
+    align-content: center;
 }
 
 h1,
@@ -51,6 +73,7 @@ h5 {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
     line-height: 1.15;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 h1 {
@@ -113,14 +136,13 @@ body {
     display: flex;
     background-color: rgba(113, 154, 216, 1);
     margin: 0px 0px 0px 0px;
-    font-size: 50px;
     font-style: italic;
     color: rgba(255, 255, 255, 1);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: stretch;
+    align-items: center;
     align-content: center;
 }
 
@@ -137,15 +159,13 @@ body {
     grid-area: footer;
     display: flex;
     border-top: solid 3px red;
-    padding: 0px 20px;
     background-color: rgba(113, 154, 216, 1);
     margin: 0px 0px 0px 0px;
-    font-size: 10px;
     font-style: italic;
     color: rgba(163, 11, 55, 1);
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: stretch;
+    align-items: center;
     align-content: center;
 }
 
@@ -155,11 +175,18 @@ body {
 .homeGrid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5fr 5fr 5fr;
-    grid-template-areas: "carPic" "maintMessage" "promotions";
-    padding: 20px;
+    grid-template-rows: 50px 4fr 4fr 2fr;
+    grid-template-areas: "homeMenu""carPic" "maintMessage" "promotions";
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
     height: 100%;
     gap: 10px 10px;
+}
+
+.homeMenu {
+    grid-area: homeMenu;
 }
 
 .carPic {
@@ -168,7 +195,7 @@ body {
     flex-direction: column;
     background-image: url(/car1.565c7259.jpg);
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center center;
     background-size: cover;
 }
 
@@ -230,7 +257,12 @@ nav>ul {
     position: relative;
     padding: 5px 0px;
     margin: 0px 0px;
-    font-size: 20px;
+    background-image: url(/navBars.c974e4a6.jpg);
+    background-size: auto auto;
+    image-rendering: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
 }
 
 nav>ul>li {

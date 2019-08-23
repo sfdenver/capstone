@@ -343,13 +343,13 @@ exports.default = void 0;
 function linkBuilder(links) {
   // Receive an Array of 'strings' that are the names of nav links
   // Return all the necessary <li> items
-  console.log(links);
+  // console.log(links);
   return links.map(function (link) {
     return (
       /**
-                      An HTML data attribute provides additional information that can be used by JS as a hook.
-                      In this case, 'navigo' is something that navigo uses to bind the link 'text' to the   Navigo router.
-                      */
+                              An HTML data attribute provides additional information that can be used by JS as a hook.
+                              In this case, 'navigo' is something that navigo uses to bind the link 'text' to the   Navigo router.
+                              */
       "<li><a href=\"/".concat(link.toLowerCase(), "\"\n        data-navigo>").concat(link, "</a></li>")
     );
   }).join(' ');
@@ -397,7 +397,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(state, ref) {
-  return "\n<footer class='footer'>\n    <h2>luvmyride.com</h2>\n    <h2>copyright 2019</h2>\n</footer>\n";
+  return "\n<footer class='footer'>\n    <p>luvmyride.com</p>\n    <p>copyright 2019</p>\n</footer>\n";
 };
 
 exports.default = _default;
@@ -2474,7 +2474,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     store.blog.page = blogHTML;
 });
 */
-},{"./components/dataStore":"components/dataStore.js","./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/10188/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/dataStore":"components/dataStore.js","./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/3084/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2502,7 +2502,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57557" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61291" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2677,5 +2677,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/10188/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/3084/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/capstone.e31bb0bc.js.map
