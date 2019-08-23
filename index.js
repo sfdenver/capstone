@@ -19,12 +19,11 @@ function render(state){
     // functions are invoked to return the results for each
     console.log('render using state = ', state);
     document.querySelector('#root').innerHTML = `
-      ${dataStore(state, ref)}
-      ${maintCalc(state, ref)}
-      ${Header(state, ref)}
-      ${Navigation(state, ref)}
-      ${Main(state, ref)}
-      ${Footer(state, ref)}
+      ${maintCalc(state, dataStore)}
+      ${Header(state, dataStore)}
+      ${Navigation(state, dataStore)}
+      ${Main(state, dataStore)}
+      ${Footer(state, dataStore)}
     `;
 
     // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component

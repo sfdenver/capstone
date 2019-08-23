@@ -129,15 +129,16 @@ exports.default = void 0;
 Common section to define global data objects
 Short-cut for demo instead of creating database
 */
-var owner = {
-  '	ID	 ': 1,
-  '	name	 ': '	Robert Bruce	 ',
-  '	nickname	 ': '	Bubba Bruce	 ',
-  '	driveStyle	 ': '	Charge	 ',
-  '	promptStyle	 ': '	Drill Sergeant	 ',
-  '	maintStyle	 ': '	Close enough	 '
+var dataStore = {};
+dataStore.owner = {
+  'ID	 ': 1,
+  'name': 'Robert Bruce',
+  'nickname': 'Bubba Bruce',
+  'driveStyle': 'Charge',
+  'promptStyle': 'Drill Sergeant',
+  'maintStyle': 'Close enough'
 };
-var driveStyle = [{
+dataStore.driveStyle = [{
   'id': 1,
   'style': 'Careful',
   'driveFactor': 1.25
@@ -158,7 +159,7 @@ var driveStyle = [{
   'style': 'Backcountry',
   'driveFactor': 0.65
 }];
-var maintStyle = [{
+dataStore.maintStyle = [{
   'id': 1,
   'style': 'Early',
   'maintFactor': 0.8
@@ -179,7 +180,7 @@ var maintStyle = [{
   'style': 'When It Breaks',
   'maintFactor ': 3.0
 }];
-var promptStyle = [{
+dataStore.promptStyle = [{
   'id': 1,
   'style': 'Polite',
   'maintMessage': [{
@@ -275,7 +276,7 @@ var promptStyle = [{
     'Hopeless': 'You may be worthless, and so will your car. It may not matter anymore. Critical service is hopelessly overdue!'
   }]
 }];
-var promoAvailable = [{
+dataStore.promoAvailable = [{
   'id': 1,
   'serviceCategory': 'Brakes',
   'promoProvider': 'Plaza Infinity',
@@ -306,11 +307,7 @@ var promoAvailable = [{
   'message': 'Special for our favorite customers. Synthetic Oil change $34.99! Drop-off or while you wait!',
   'promoDetails': 'placeholder for image or url reference'
 }];
-
-var _default = function _default(state, ref) {
-  return ' ';
-};
-
+var _default = dataStore;
 exports.default = _default;
 },{}],"components/maintCalc.js":[function(require,module,exports) {
 "use strict";
@@ -373,8 +370,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _default = function _default(state, ref) {
-  return "\n    <header class='header'>\n            <p><strong> $[owner.nickname] </strong></p>\n    </header>\n";
+var _default = function _default(state, dataStore) {
+  return "\n    <header class='header'>\n            <p><strong> ".concat(dataStore.owner.nickname, " </strong></p>\n    </header>\n");
 };
 
 exports.default = _default;
@@ -2405,7 +2402,7 @@ var ref = '';
 function render(state) {
   // functions are invoked to return the results for each
   console.log('render using state = ', state);
-  document.querySelector('#root').innerHTML = "\n      ".concat((0, _dataStore.default)(state, ref), "\n      ").concat((0, _maintCalc.default)(state, ref), "\n      ").concat((0, _Header.default)(state, ref), "\n      ").concat((0, _Navigation.default)(state, ref), "\n      ").concat((0, _Main.default)(state, ref), "\n      ").concat((0, _Footer.default)(state, ref), "\n    "); // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
+  document.querySelector('#root').innerHTML = "\n      ".concat((0, _maintCalc.default)(state, _dataStore.default), "\n      ").concat((0, _Header.default)(state, _dataStore.default), "\n      ").concat((0, _Navigation.default)(state, _dataStore.default), "\n      ").concat((0, _Main.default)(state, _dataStore.default), "\n      ").concat((0, _Footer.default)(state, _dataStore.default), "\n    "); // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
 
   router.updatePageLinks();
 } // testing line:  console.log('state came in as ' + state);
@@ -2477,7 +2474,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     store.blog.page = blogHTML;
 });
 */
-},{"./components/dataStore":"components/dataStore.js","./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/2244/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/dataStore":"components/dataStore.js","./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/9684/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2505,7 +2502,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58400" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61357" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2680,5 +2677,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/2244/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/9684/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/capstone.e31bb0bc.js.map

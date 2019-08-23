@@ -1,5 +1,5 @@
-export default (state, ref) => `
+export default (state, dataStore) => `
     <header class='header'>
-            <p><strong> $[owner.nickname] </strong></p>
+            <p><strong> ${dataStore.owner.nickname} </strong></p>
     </header>
 `;

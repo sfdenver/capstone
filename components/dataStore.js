@@ -2,16 +2,18 @@
 Common section to define global data objects
 Short-cut for demo instead of creating database
 */
-const owner = {
-    '	ID	 ': 1,
-    '	name	 ': '	Robert Bruce	 ',
-    '	nickname	 ': '	Bubba Bruce	 ',
-    '	driveStyle	 ': '	Charge	 ',
-    '	promptStyle	 ': '	Drill Sergeant	 ',
-    '	maintStyle	 ': '	Close enough	 '
+const dataStore = {};
+
+dataStore.owner = {
+    'ID	 ': 1,
+    'name': 'Robert Bruce',
+    'nickname': 'Bubba Bruce',
+    'driveStyle': 'Charge',
+    'promptStyle': 'Drill Sergeant',
+    'maintStyle': 'Close enough'
 };
 
-const driveStyle = [
+dataStore.driveStyle = [
     { 'id': 1, 'style': 'Careful', 'driveFactor': 1.25 },
     { 'id': 2, 'style': 'Steady', 'driveFactor': 1 },
     { 'id': 3, 'style': 'Charge', 'driveFactor': 0.75 },
@@ -19,7 +21,7 @@ const driveStyle = [
     { 'id': 5, 'style': 'Backcountry', 'driveFactor': 0.65 }
 ];
 
-const maintStyle = [
+dataStore.maintStyle = [
     { 'id': 1, 'style': 'Early', 'maintFactor': 0.8 },
     { 'id': 2, 'style': 'On Time', 'maintFactor': 1.0 },
     { 'id': 3, 'style': 'Close Enough', 'maintFactor': 1.2 },
@@ -27,7 +29,7 @@ const maintStyle = [
     { 'id': 5, 'style': 'When It Breaks', 'maintFactor ': 3.0 }
 ];
 
-const promptStyle = [ {
+dataStore.promptStyle = [ {
     'id': 1,
     'style': 'Polite',
     'maintMessage': [
@@ -85,7 +87,7 @@ const promptStyle = [ {
 }
 ];
 
-const promoAvailable = [
+dataStore.promoAvailable = [
     { 'id': 1, 'serviceCategory': 'Brakes', 'promoProvider': 'Plaza Infinity', 'message': 'We are Infinty repair experts - give us a try. Special on brake service! 20% Off until Sept. 30, 2019.', 'promoDetails': 'placeholder for image or url reference' },
     { 'id': 2, 'serviceCategory': 'Oil Change', 'promoProvider': 'Plaza Infinity', 'message': 'Convenient oil change while you wait! Synthetic Oil change for your Infinity for $39.95 every day', 'promoDetails': 'placeholder for image or url reference' },
     { 'id': 3, 'serviceCategory': 'Brakes', 'promoProvider': 'Precision Auto Repair', 'message': 'Special for our favorite customers. Special for Brake discs and rotars 25% Off until Nov. 1, 2019.', 'promoDetails': 'placeholder for image or url reference' },
@@ -93,4 +95,4 @@ const promoAvailable = [
     { 'id': 5, 'serviceCategory': 'Oil Change', 'promoProvider': 'Precision Auto Repair', 'message': 'Special for our favorite customers. Synthetic Oil change $34.99! Drop-off or while you wait!', 'promoDetails': 'placeholder for image or url reference' },
 ];
 
-export default (state, ref) => ' ';
+export default (dataStore);

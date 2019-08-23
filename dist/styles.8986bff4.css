@@ -2,11 +2,15 @@
    Coolors Exported Palette - coolors.co/ffffff-364181-b2c8e9-719ad8-a30b37
    RGB */
 
+
+/*
 $color1: rgba(255, 255, 255, 1);
 $color2: rgba(54, 65, 129, 1);
 $color3: rgba(178, 200, 233, 1);
 $color4: rgba(113, 154, 216, 1);
 $color5: rgba(163, 11, 55, 1);
+*/
+
 
 /* set default styles for all pages */
 
@@ -30,9 +34,9 @@ p {
 .container1 {
     display: grid;
     grid-template-columns: 10% 1fr;
-    grid-template-rows: 10% 80% 10%;
+    grid-template-rows: 40px 1fr 40px;
     grid-template-areas: "nav header" "main main" "footer footer";
-    width: 100vw;
+    width: 100%;
     grid-gap: 0px;
     height: 100vh;
     color: black;
@@ -75,7 +79,7 @@ p {
     padding: 0px 20px;
     background-color: rgba(113, 154, 216, 1);
     margin: 0px 0px 0px 0px;
-    font-size: 30px;
+    font-size: 10px;
     font-style: italic;
     color: rgba(163, 11, 55, 1);
     flex-direction: row;
@@ -90,9 +94,11 @@ p {
 .homeGrid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 70% 30%;
+    grid-template-rows: 5fr 5fr 5fr;
     grid-template-areas: "carPic" "maintMessage" "promotions";
     padding: 20px;
+    height: 100%;
+    gap: 10px 10px;
 }
 
 .carPic {
