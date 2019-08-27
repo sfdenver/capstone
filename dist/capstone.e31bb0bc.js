@@ -501,15 +501,15 @@ function linkBuilder(links) {
   return links.map(function (link) {
     return (
       /**
-                  An HTML data attribute provides additional information that can be used by JS as a hook.
-                  In this case, 'navigo' is something that navigo uses to bind the link 'text' to the   Navigo router.
-                  */
+                          An HTML data attribute provides additional information that can be used by JS as a hook.
+                          In this case, 'navigo' is something that navigo uses to bind the link 'text' to the   Navigo router.
+                          */
       "<li><a href=\"/".concat(link.toLowerCase(), "\"\n        data-navigo>").concat(link, "</a></li>")
     );
   }).join(' ');
 }
 
-var _default = function _default(state, ref) {
+var _default = function _default(state, dataStore) {
   return "\n<nav class='nav'>\n    <ul>\n        <li class=\"dropdown\">\n        ICON\n        <ul>\n            ".concat(linkBuilder(state.links.dropdown), "\n        </ul>\n        </li>\n    </ul>\n  </nav>\n");
 };
 /** ${linkBuilder(state.links.primary)} */
@@ -525,8 +525,12 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(state, dataStore) {
-  return "\n    <header class='header'>\n            <p><strong> ".concat(dataStore.owner.nickname, " </strong></p>\n    </header>\n");
+  return "\n    <header class='header'>\n            <p><strong> Robert Bruce </strong></p>\n    </header>\n";
 };
+/*
+        p><strong> ${dataStore.owner.nickname} </strong></p>
+*/
+
 
 exports.default = _default;
 },{}],"components/Main.js":[function(require,module,exports) {
@@ -582,6 +586,103 @@ var _default = {
 */
 
 exports.default = _default;
+var dataStore = {};
+dataStore.promptStyle = [{
+  'id': 1,
+  'style': 'Polite',
+  'maintMessage': [{
+    'id': 1,
+    'Heads-up': 'Heads-up, important service needed soon!'
+  }, {
+    'id': 2,
+    'Nudge': 'Nudging you, important maintenance now needed!'
+  }, {
+    'id': 3,
+    'Warning': 'Warning! important service overdue!'
+  }, {
+    'id': 4,
+    'Strong Warning': 'Very Urgent, important service seriously overdue!'
+  }, {
+    'id': 5,
+    'Hopeless': 'Your car may break, important service hopelessly overdue!'
+  }]
+}, {
+  'id': 2,
+  'style': 'Whine',
+  'maintMessage': [{
+    'id': 1,
+    'Heads-up': 'Heads-up, important service needed soon!'
+  }, {
+    'id': 2,
+    'Nudge': 'Nudging you, important maintenance now needed!'
+  }, {
+    'id': 3,
+    'Warning': 'Warning! important service overdue!'
+  }, {
+    'id': 4,
+    'Strong Warning': 'Very Urgent, important service seriously overdue!'
+  }, {
+    'id': 5,
+    'Hopeless': 'Your car may break, important service hopelessly overdue!'
+  }]
+}, {
+  'id': 3,
+  'style': 'HAL',
+  'maintMessage': [{
+    'id': 1,
+    'Heads-up': 'Heads-up, important service needed soon!'
+  }, {
+    'id': 2,
+    'Nudge': 'Nudging you, important maintenance now needed!'
+  }, {
+    'id': 3,
+    'Warning': 'Warning! important service overdue!'
+  }, {
+    'id': 4,
+    'Strong Warning': 'Very Urgent, important service seriously overdue!'
+  }, {
+    'id': 5,
+    'Hopeless': 'Your car may break, important service hopelessly overdue!'
+  }]
+}, {
+  'id': 4,
+  'style': 'Drill Sergeant',
+  'maintMessage': [{
+    'id': 1,
+    'Heads-up': 'Are you sleepy? Time to wake up and get ready! Important service needed soon!'
+  }, {
+    'id': 2,
+    'Nudge': 'What are you doing - taking a nap? Get off your A** and move it. Important maintenance now needed!'
+  }, {
+    'id': 3,
+    'Warning': 'ARE YOU HEARING THIS! YOUR CAR SERVICE IS LONG OVERDUE!'
+  }, {
+    'id': 4,
+    'Strong Warning': 'YOU ARE FRIGGING KIDDING ME. GROW UP AND GET THIS DONE NOW! RIGHT NOW! YOUR ARE SERIOUSLY OVERDUE!'
+  }, {
+    'id': 5,
+    'Hopeless': 'MAGGOT - YOU HOPELESS PIECE OF S**T. YOUR CAR IS FALLING APART. YOU ARE PATHETIC. NOBODY BUT A BABY IGNORES THEIR CAR THIS LONG. GET MOVING AND FIX YOUR CAR!'
+  }]
+}, {
+  'id': 5,
+  'style': 'Insult',
+  'maintMessage': [{
+    'id': 1,
+    'Heads-up': 'Hey Pea Brain, your car needs service soon - start now and you might be on time!'
+  }, {
+    'id': 2,
+    'Nudge': 'Knucklehead - I told you it was coming. Important maintenance now needed!'
+  }, {
+    'id': 3,
+    'Warning': 'What is wrong with you! Important service is overdue! Get it fixed now'
+  }, {
+    'id': 4,
+    'Strong Warning': 'Last chance! Your car is better than you! VERY URGENT SERVICE LONG OVERDUE!'
+  }, {
+    'id': 5,
+    'Hopeless': 'You may be worthless, and so will your car. It may not matter anymore. Critical service is hopelessly overdue!'
+  }]
+}];
 },{}],"store/Car.js":[function(require,module,exports) {
 "use strict";
 
@@ -675,7 +776,7 @@ var _default = {
     'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
   'title': 'Promotions',
-  'page': "\n<section>\n<h2>To Do - Logo of Promotion Provider<span>Provider Name </h2>\n<p> To Do: List Sample Promotions being offered\n</p>\n</section>\n"
+  'page': "\n<section class='secondPage>\n    <h2>Promotions</h2>\n        <p>To Do: List Sample Promotions being offered\n    </p>\n</section>\n"
 };
 exports.default = _default;
 },{}],"store/Providers.js":[function(require,module,exports) {
@@ -2563,7 +2664,7 @@ var ref = '';
 function render(state, dataStore) {
   // functions are invoked to return the results for each
   console.log('render using state = ', state);
-  document.querySelector('#root').innerHTML = "\n      ".concat((0, _maintCalc.default)(state, dataStore), "\n      ").concat((0, _Header.default)(state, dataStore), "\n      ").concat((0, _Navigation.default)(state, dataStore), "\n      ").concat((0, _Main.default)(state, dataStore), "\n      ").concat((0, _Footer.default)(state, dataStore), "\n    "); // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
+  document.querySelector('#root').innerHTML = "\n      ".concat(dataStore(dataStore), "\n      ").concat((0, _maintCalc.default)(state, dataStore), "\n      ").concat((0, _Header.default)(state, dataStore), "\n      ").concat((0, _Navigation.default)(state, dataStore), "\n      ").concat((0, _Main.default)(state, dataStore), "\n      ").concat((0, _Footer.default)(state, dataStore), "\n    "); // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
 
   router.updatePageLinks();
 }
@@ -2635,7 +2736,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     store.blog.page = blogHTML;
 });
 */
-},{"./components/dataStore":"components/dataStore.js","./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/18132/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/dataStore":"components/dataStore.js","./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/17304/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2663,7 +2764,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52409" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55571" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2838,5 +2939,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/18132/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/17304/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/capstone.e31bb0bc.js.map

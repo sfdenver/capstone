@@ -5,10 +5,10 @@ export default {
     },
     'title': 'Promotions',
     'page': `
-<section>
-<h2>To Do - Logo of Promotion Provider<span>Provider Name </h2>
-<p> To Do: List Sample Promotions being offered
-</p>
+<section class='secondPage>
+    <h2>Promotions</h2>
+        <p>To Do: List Sample Promotions being offered
+    </p>
 </section>
 `
 };

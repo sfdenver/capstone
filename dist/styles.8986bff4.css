@@ -213,6 +213,23 @@ body {
 }
 
 
+/* standard blank page */
+
+.secondPage {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "secondPage";
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    height: 100%;
+    gap: 10px 10px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
 /* default styles for html */
 
 ul {
