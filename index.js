@@ -1,5 +1,7 @@
 // import dataStore first to ensure global data are defined before used
+console.log('first index.js');
 import dataStore from './components/dataStore';
+console.log('second index.js');
 import maintCalc from './components/maintCalc';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
@@ -15,10 +17,11 @@ import Axios from 'axios';
 const router = new Navigo(location.origin);
 const ref = '';
 
-function render(state){
+function render(state, dataStore){
     // functions are invoked to return the results for each
     console.log('render using state = ', state);
     document.querySelector('#root').innerHTML = `
+      ${dataStore(dataStore)}
       ${maintCalc(state, dataStore)}
       ${Header(state, dataStore)}
       ${Navigation(state, dataStore)}
@@ -30,7 +33,7 @@ function render(state){
     router.updatePageLinks();
 }
 
-// testing line:  console.log('state came in as ' + state);
+console.log('state came in as ', store);
 
 
 /** following code was replaced with navigo functionality

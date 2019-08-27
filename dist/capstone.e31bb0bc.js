@@ -130,14 +130,165 @@ Common section to define global data objects
 Short-cut for demo instead of creating database
 */
 var dataStore = {};
+console.log('first dataStore log');
 dataStore.owner = {
   'ID	 ': 1,
   'name': 'Robert Bruce',
-  'nickname': 'Bubba Bruce',
+  'nickname': 'Bob Bruce',
   'driveStyle': 'Charge',
   'promptStyle': 'Drill Sergeant',
   'maintStyle': 'Close enough'
 };
+dataStore.garage = [{
+  'ID	 ': 1,
+  'make': 'Infinity',
+  'model': 'G35x',
+  'year': '2009',
+  'VIN': 'X231876',
+  'carPic': 'url(./Data/car1.jpg)',
+  'nickname': 'car 1',
+  'currentMileage': 88000,
+  'driveHistory': [{
+    'year': 19,
+    'month': 5,
+    'day': 15,
+    'mileage': 83000,
+    'avgSpeed': 32,
+    'stopsPerMile': 3.4
+  }, {
+    'year': 18,
+    'month': 11,
+    'day': 15,
+    'mileage': 72000,
+    'avgSpeed': 32,
+    'stopsPerMile': 3.4
+  }, {
+    'year': 17,
+    'month': 2,
+    'day': 15,
+    'mileage': 66000,
+    'avgSpeed': 32,
+    'stopsPerMile': 3.4
+  }, {
+    'year': 16,
+    'month': 8,
+    'day': 15,
+    'mileage': 55000,
+    'avgSpeed': 32,
+    'stopsPerMile': 3.4
+  }],
+  'maintStandards': [{
+    'oil': 7500,
+    'air filter': 15000,
+    'brakes': 35000,
+    'transmission': 75000,
+    'engine': 100000
+  }],
+  'warranty': [{
+    'summary': 'placeholder'
+  }],
+  'repairs': [{
+    'carID': 1,
+    'repairHistory': [{
+      'year': 19,
+      'month': 5,
+      'day': 15,
+      'mileage': 81000,
+      'repair': 'Oil',
+      'providerName': 'Plaza Infinity'
+    }, {
+      'year': 18,
+      'month': 10,
+      'day': 15,
+      'mileage': 73000,
+      'repair': 'Oil',
+      'providerName': 'Plaza Infinity'
+    }, {
+      'year': 18,
+      'month': 1,
+      'day': 15,
+      'mileage': 63000,
+      'repair': 'Oil',
+      'providerName': 'Precision Auto Repair'
+    }, {
+      'year': 17,
+      'month': 5,
+      'day': 15,
+      'mileage': 53000,
+      'repair': 'Brakes',
+      'providerName': 'Plaza Infinity'
+    }, {
+      'year': 17,
+      'month': 5,
+      'day': 15,
+      'mileage': 53000,
+      'repair': 'Oil',
+      'providerName': 'Plaza Infinity'
+    }]
+  }]
+}];
+dataStore.serviceProvider = [{
+  'id': 1,
+  'providerName': 'Plaza Infinity',
+  'phoneNo': '314-285-6114',
+  'streetAddress': '11341 Olive Blvd',
+  'cityAddress': 'St. Louis',
+  'stateAddress': 'MO',
+  'zip': '63138',
+  'myRating': '5',
+  'comments': 'ask for Bill'
+}, {
+  'id': 2,
+  'providerName': 'Precision Auto Repair',
+  'phoneNo': '314-611-66666',
+  'streetAddress': '10341 Manchester Rd.',
+  'cityAddress': 'St. Louis',
+  'stateAddress': 'MO',
+  'zip': '63138',
+  'myRating': '5',
+  'comments': 'ask for Bill'
+}, {
+  'id': 3,
+  'providerName': 'Raymond Exotic Car Repair',
+  'phoneNo': '314-832-4545',
+  'streetAddress': '981 Page Blvd',
+  'cityAddress': 'St. Louis',
+  'stateAddress': 'MO',
+  'zip': '63138',
+  'myRating': '5',
+  'comments': 'ask for Bill'
+}];
+dataStore.promoAvailable = [{
+  'id': 1,
+  'serviceCategory': 'Brakes',
+  'promoProvider': 'Plaza Infinity',
+  'message': 'We are Infinty repair experts - give us a try. Special on brake service! 20% Off until Sept. 30, 2019.',
+  'promoDetails': 'placeholder for image or url reference'
+}, {
+  'id': 2,
+  'serviceCategory': 'Oil Change',
+  'promoProvider': 'Plaza Infinity',
+  'message': 'Convenient oil change while you wait! Synthetic Oil change for your Infinity for $39.95 every day',
+  'promoDetails': 'placeholder for image or url reference'
+}, {
+  'id': 3,
+  'serviceCategory': 'Brakes',
+  'promoProvider': 'Precision Auto Repair',
+  'message': 'Special for our favorite customers. Special for Brake discs and rotars 25% Off until Nov. 1, 2019.',
+  'promoDetails': 'placeholder for image or url reference'
+}, {
+  'id': 4,
+  'serviceCategory': 'Brakes',
+  'promoProvider': 'Raymond Exotic Car Repair',
+  'message': 'Specialists for your sports car! High Performance Brake special 30% off until Oct. 19, 2019.',
+  'promoDetails': 'placeholder for image or url reference'
+}, {
+  'id': 5,
+  'serviceCategory': 'Oil Change',
+  'promoProvider': 'Precision Auto Repair',
+  'message': 'Special for our favorite customers. Synthhetic Oil change $34.99! Drop-off or while you wait!',
+  'promoDetails': 'placeholder for image or url reference'
+}];
 dataStore.driveStyle = [{
   'id': 1,
   'style': 'Careful',
@@ -257,7 +408,7 @@ dataStore.promptStyle = [{
     'Hopeless': 'MAGGOT - YOU HOPELESS PIECE OF S**T. YOUR CAR IS FALLING APART. YOU ARE PATHETIC. NOBODY BUT A BABY IGNORES THEIR CAR THIS LONG. GET MOVING AND FIX YOUR CAR!'
   }]
 }, {
-  'id': 1,
+  'id': 5,
   'style': 'Insult',
   'maintMessage': [{
     'id': 1,
@@ -307,7 +458,12 @@ dataStore.promoAvailable = [{
   'message': 'Special for our favorite customers. Synthetic Oil change $34.99! Drop-off or while you wait!',
   'promoDetails': 'placeholder for image or url reference'
 }];
-var _default = dataStore;
+console.log('second dataStore log');
+
+var _default = function _default(dataStore) {
+  return ' ';
+};
+
 exports.default = _default;
 },{}],"components/maintCalc.js":[function(require,module,exports) {
 "use strict";
@@ -327,7 +483,9 @@ Steps:
 3. Identify Urgency for each maintenance item based on Maintenance Style
 4. Select Prompt message based on Urgency and Prompt Preference
 */
-var _default = function _default(state, ref) {
+function maintCalc(dataStore) {}
+
+var _default = function _default(state, dataStore) {
   return ' ';
 };
 
@@ -347,9 +505,9 @@ function linkBuilder(links) {
   return links.map(function (link) {
     return (
       /**
-                              An HTML data attribute provides additional information that can be used by JS as a hook.
-                              In this case, 'navigo' is something that navigo uses to bind the link 'text' to the   Navigo router.
-                              */
+                  An HTML data attribute provides additional information that can be used by JS as a hook.
+                  In this case, 'navigo' is something that navigo uses to bind the link 'text' to the   Navigo router.
+                  */
       "<li><a href=\"/".concat(link.toLowerCase(), "\"\n        data-navigo>").concat(link, "</a></li>")
     );
   }).join(' ');
@@ -383,7 +541,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _default = function _default(state, ref) {
+var _default = function _default(state, dataStore) {
   return "\n    <main class='main'>\n      ".concat(state.page, "\n    </main>\n");
 };
 
@@ -413,14 +571,20 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+console.log('first home page log');
 var _default = {
   'links': {
     'primary': ['Home'],
     'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
   'title': 'This is the home page!',
-  'page': "\n    <section class='homeGrid'>\n        <section class='carPic'>\n            <p> To Do - picture of car</p>\n        </section>\n        <section class='maintMessage'>\n            <p> To Do - Maintenance Prompts</p>\n            <p> To Do - Maintenance Prompts</p>\n        </section>\n        <section class='promotions'>\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n        </section>\n    </section>\n\n      "
+  'page': "\n    <section class='homeGrid'>\n        <section>\n            <p></p>\n        </section>\n        <section class='carPic'>\n            <img src='./Data/car1.jpg' >\n        </section>\n        <section class='maintMessage'>\n            <p> To Do - Maintenance Prompts</p>\n            <p> To Do - Maintenance Prompts</p>\n        </section>\n        <section class='promotions'>\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n        </section>\n    </section>\n\n      "
 };
+/*
+        <-- <p>${dataStore.garage(make)}</p>  -->
+        <-- <p>img src=${dataStoregarage}</p>  -->
+*/
+
 exports.default = _default;
 },{}],"store/Car.js":[function(require,module,exports) {
 "use strict";
@@ -2393,20 +2557,22 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import dataStore first to ensure global data are defined before used
-// import Navigo constructor function from the node 'navigo'
+console.log('first index.js');
+console.log('second index.js');
 console.log('Store came in as ', store);
 // import { Http2SecureServer } from 'http2';
 var router = new _navigo.default(location.origin);
 var ref = '';
 
-function render(state) {
+function render(state, dataStore) {
   // functions are invoked to return the results for each
   console.log('render using state = ', state);
-  document.querySelector('#root').innerHTML = "\n      ".concat((0, _maintCalc.default)(state, _dataStore.default), "\n      ").concat((0, _Header.default)(state, _dataStore.default), "\n      ").concat((0, _Navigation.default)(state, _dataStore.default), "\n      ").concat((0, _Main.default)(state, _dataStore.default), "\n      ").concat((0, _Footer.default)(state, _dataStore.default), "\n    "); // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
+  document.querySelector('#root').innerHTML = "\n      ".concat(dataStore(dataStore), "\n      ").concat((0, _maintCalc.default)(state, dataStore), "\n      ").concat((0, _Header.default)(state, dataStore), "\n      ").concat((0, _Navigation.default)(state, dataStore), "\n      ").concat((0, _Main.default)(state, dataStore), "\n      ").concat((0, _Footer.default)(state, dataStore), "\n    "); // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
 
   router.updatePageLinks();
-} // testing line:  console.log('state came in as ' + state);
+}
 
+console.log('state came in as ', store);
 /** following code was replaced with navigo functionality
 
 // Navigation listeners. Elements will not exist until page is rendered.
@@ -2426,7 +2592,6 @@ navItems.forEach(function eventListenerAdder(navItem){
 // end of replace code
 */
 // request to render a page passes in a selected state.
-
 
 console.log(store.home);
 render(store.home);
@@ -2474,7 +2639,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     store.blog.page = blogHTML;
 });
 */
-},{"./components/dataStore":"components/dataStore.js","./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/3084/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/dataStore":"components/dataStore.js","./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/18132/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2502,7 +2667,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61291" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52409" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2677,5 +2842,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/3084/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/18132/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/capstone.e31bb0bc.js.map

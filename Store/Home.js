@@ -1,3 +1,5 @@
+console.log('first home page log');
+
 export default {
     'links': {
         'primary': [ 'Home' ],
@@ -6,8 +8,11 @@ export default {
     'title': 'This is the home page!',
     'page': `
     <section class='homeGrid'>
+        <section>
+            <p></p>
+        </section>
         <section class='carPic'>
-            <p> To Do - picture of car</p>
+            <img src='./Data/car1.jpg' >
         </section>
         <section class='maintMessage'>
             <p> To Do - Maintenance Prompts</p>
@@ -23,3 +28,8 @@ export default {
 
       `
 };
+
+/*
+        <-- <p>${dataStore.garage(make)}</p>  -->
+        <-- <p>img src=${dataStoregarage}</p>  -->
+*/

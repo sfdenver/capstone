@@ -257,11 +257,11 @@ nav>ul {
     position: relative;
     padding: 5px 0px;
     margin: 0px 0px;
-    background-image: url(./Images/navBars.jpg);
+    background-image: url(./Images/bars-solid.svg);
     background-size: auto auto;
     image-rendering: auto;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center center;
     background-size: cover;
 }
 

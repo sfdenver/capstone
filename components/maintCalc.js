@@ -7,6 +7,8 @@ Steps:
 3. Identify Urgency for each maintenance item based on Maintenance Style
 4. Select Prompt message based on Urgency and Prompt Preference
 */
+function maintCalc(dataStore){
 
+}
 
-export default (state, ref) => ' ';
+export default (state, dataStore) => ' ';
