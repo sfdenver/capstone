@@ -1,37 +1,10 @@
-/* Standard Colors 
-   Coolors Exported Palette - coolors.co/ffffff-364181-b2c8e9-719ad8-a30b37
-   RGB */
-
-
-/*
-$color1: rgba(255, 255, 255, 1);
-$color2: rgba(54, 65, 129, 1);
-$color3: rgba(178, 200, 233, 1);
-$color4: rgba(113, 154, 216, 1);
-$color5: rgba(163, 11, 55, 1);
-*/
-
-
-/* support for debugging */
-
-nav,
-header,
-main,
-footer,
-section,
-{
-    border: solid thin black;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400|Heebo:400');
-html {
-    /*font-size: 16px;
+/*font-size: 16px;
     */
-}
 
+
+}
 
 /* 1em @ 48em (768px) increasing to 2em @ 120em (1920px) */
-
 @media (min-width: 48rem) {
      :root {
         font-size: calc(1rem + ((1vw - .48rem) * 1.389));
@@ -40,18 +13,14 @@ html {
     }
 }
 
-
 /* Stop font scaling above 1920px */
-
 @media (min-width: 120em) {
      :root {
         font-size: 2rem;
     }
 }
 
-
 /* set default styles for all pages */
-
 body {
     background-color: white;
     font-family: 'Heebo', sans-serif;
@@ -59,12 +28,10 @@ body {
     line-height: 1.25;
     color: #333;
 }
-
 p {
     font-size: 1rem;
     align-content: center;
 }
-
 h1,
 h2,
 h3,
@@ -75,33 +42,26 @@ h5 {
     line-height: 1.15;
     background-color: rgba(255, 255, 255, 1);
 }
-
 h1 {
     margin-top: 0;
     font-size: 3.052em;
 }
-
 h2 {
     font-size: 2.441em;
 }
-
 h3 {
     font-size: 1.953em;
 }
-
 h4 {
     font-size: 1.563em;
 }
-
 h5 {
     font-size: 1.25em;
 }
-
 small,
 .text_small {
     font-size: 0.8em;
 }
-
 
 /*
 body {
@@ -112,9 +72,7 @@ body {
 }
 */
 
-
 /* Main page container  */
-
 .container1 {
     display: grid;
     grid-template-columns: 50px 1fr;
@@ -125,12 +83,10 @@ body {
     height: 100vh;
     color: black;
 }
-
 .nav {
     grid-area: nav;
     background-color: rgba(255, 255, 255, 1);
 }
-
 .header {
     grid-area: header;
     display: flex;
@@ -145,7 +101,6 @@ body {
     align-items: center;
     align-content: center;
 }
-
 .main {
     grid-area: main;
     display: flex;
@@ -154,7 +109,6 @@ body {
     margin: 0px 0px 0px 0px;
     align-items: stretch;
 }
-
 .footer {
     grid-area: footer;
     display: flex;
@@ -169,9 +123,7 @@ body {
     align-content: center;
 }
 
-
 /* Grid for Home Page */
-
 .homeGrid {
     display: grid;
     grid-template-columns: 1fr;
@@ -184,11 +136,9 @@ body {
     height: 100%;
     gap: 10px 10px;
 }
-
 .homeMenu {
     grid-area: homeMenu;
 }
-
 .carPic {
     grid-area: carPic;
     display: flex;
@@ -197,14 +147,12 @@ body {
     background-position: center center;
     background-size: cover;
 }
-
 .maintMessage {
     grid-area: maintMessage;
     background-color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
 }
-
 .promotions {
     grid-area: promotions;
     background-color: rgba(255, 255, 255, 1);
@@ -212,50 +160,40 @@ body {
     flex-direction: column;
 }
 
-
 /* standard blank page */
-
 .secondPage {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "secondPage";
     padding-left: 10px;
-    padding-top: 0px;
+    padding-top: 10px;
     padding-right: 10px;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
     height: 100%;
     gap: 10px 10px;
     background-color: rgba(255, 255, 255, 1);
 }
 
-
 /* default styles for html */
-
 ul {
     padding: 0;
 }
-
 li {
     list-style-type: none;
 }
-
 figure {
     margin: 25px auto;
     width: 100vw;
     text-align: center;
 }
 
-
 /* stock image embedded in figure  */
-
 img {
     max-width: 100%;
 }
 
-
 /* Navigation section */
-
 
 /*
 nav {
@@ -265,7 +203,6 @@ nav {
     grid-area: navigation;
 }
 */
-
 nav>ul {
     display: flex;
     justify-content: space-around;
@@ -280,36 +217,31 @@ nav>ul {
     background-position: center center;
     background-size: cover;
 }
-
 nav>ul>li {
     font-size: 2rem;
     margin-left: 25px;
 }
-
 .dropdown ul {
     justify-content: space-around;
     display: none;
     border-radius: 0 0 3px 3px;
     /* moves out of document flow */
+    
     position: absolute;
     box-shadow: 3px 5px 5px darkgrey;
     padding: 8px;
     background-color: rgba(255, 255, 255, 1);
 }
 
-
 /* Generally, 'focus' goes with 'hover' state to help with keyboard navigation and accessiblity. */
-
 .dropdown:focus ul,
 .dropdown:hover ul {
     display: flex;
     flex-direction: column;
 }
 
-
 /* buttons for navigation
 */
-
 .cta-btn {
     display: inline-block;
     border-radius: 3px;
@@ -322,62 +254,50 @@ nav>ul>li {
     text-decoration: none;
     text-transform: uppercase;
     /* Normally, you should specify which properties to transition. Else, it will do all the 'transition-able' things and that could slow down the page. */
+    
     transition: 0.25s;
 }
-
 .cta-btn:focus,
 .cta-btn:hover {
     background-color: slategrey;
     transform: translateY(-3px);
 }
 
-
 /*  styles for Car History page*/
-
 .car {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 200px 1fr 150px;
     grid-template-areas: "carInfo" "carHistory " "maintLinks";
 }
-
 .carInfo {
     grid-area: carInfo;
 }
-
 .carHistory {
     grid-area: carHistory;
 }
-
 .maintLinks {
     grid-area: maintLinks;
 }
 
-
 /* Grid for Car History Items*/
-
 .CarHistoryItem {
     display: grid;
     grid-template-columns: 1fr 150px 150px;
     grid-template-rows: 1fr;
     grid-template-areas: "CarHistorySummary Link3 Link4";
 }
-
 .CarHistorySummary {
     grid-area: CarHistorySummary;
 }
-
 .Link3 {
     grid-area: Link3;
 }
-
 .Link4 {
     grid-area: Link4;
 }
 
-
 /*  Contact Page form  */
-
 form {
     border: solid 3px slategray;
     color: black;
@@ -385,27 +305,21 @@ form {
     margin: 10px auto;
     padding: 10px;
 }
-
 form span {
     margin: 0 5px;
 }
 
-
 /* Attribute selector  */
-
 input [type="checkbox"],
 input [type="radio"] {
     transform: translateY(-3px);
 }
-
 input [type="checkbox"] {
     margin-right: 10px;
 }
-
 .input-group {
     margin: 20px 0;
 }
-
 .input-group--flex {
     display: flex;
     flex-direction: column;
@@ -413,9 +327,7 @@ input [type="checkbox"] {
     color: black;
 }
 
-
 /* Hero section */
-
 
 /* save original version
 header,
@@ -443,15 +355,11 @@ header div {
 }
 */
 
-
 /* Main */
-
 
 /* styles for responsive formatting */
 
-
 /* not working properly yet */
-
 
 /*
 footer {
@@ -482,9 +390,7 @@ address {
 }
 */
 
-
 /* box border to assist troublshooting  - remove for final version */
-
 nav,
 header,
 main,

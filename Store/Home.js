@@ -14,7 +14,7 @@ export default {
             <p>Calc Maintenance Button</p>
         </section>
         <section class='carPic'>
-            <img src='./Data/car1.jpg' >
+            <img src='../Data/car1.jpg' >
         </section>
         <section class='maintMessage'>
             <p> To Do - Maintenance Prompts</p>
