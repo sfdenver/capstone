@@ -21,7 +21,6 @@ function render(state, dataStore){
     // functions are invoked to return the results for each
     console.log('render using state = ', state);
     document.querySelector('#root').innerHTML = `
-      ${dataStore(dataStore)}
       ${maintCalc(state, dataStore)}
       ${Header(state, dataStore)}
       ${Navigation(state, dataStore)}
@@ -57,7 +56,7 @@ navItems.forEach(function eventListenerAdder(navItem){
 
 // request to render a page passes in a selected state.
 console.log(store.home);
-render(store.home);
+render(store.home, dataStore);
 
 /**
   .on is a Navigo method - behaves as any event listener

@@ -208,4 +208,4 @@ dataStore.promoAvailable = [
 
 console.log('second dataStore log');
 
-export default (dataStore) => ' ';
+export default (dataStore);

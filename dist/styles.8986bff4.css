@@ -193,7 +193,6 @@ body {
     grid-area: carPic;
     display: flex;
     flex-direction: column;
-    background-image: url(/car1.565c7259.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

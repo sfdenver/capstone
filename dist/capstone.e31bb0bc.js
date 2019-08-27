@@ -459,11 +459,7 @@ dataStore.promoAvailable = [{
   'promoDetails': 'placeholder for image or url reference'
 }];
 console.log('second dataStore log');
-
-var _default = function _default(dataStore) {
-  return ' ';
-};
-
+var _default = dataStore;
 exports.default = _default;
 },{}],"components/maintCalc.js":[function(require,module,exports) {
 "use strict";
@@ -578,7 +574,7 @@ var _default = {
     'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
   'title': 'This is the home page!',
-  'page': "\n    <section class='homeGrid'>\n        <section>\n            <p></p>\n        </section>\n        <section class='carPic'>\n            <img src='./Data/car1.jpg' >\n        </section>\n        <section class='maintMessage'>\n            <p> To Do - Maintenance Prompts</p>\n            <p> To Do - Maintenance Prompts</p>\n        </section>\n        <section class='promotions'>\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n        </section>\n    </section>\n\n      "
+  'page': "\n    <section class='homeGrid'>\n        <section class='homeMenu'>\n            <p>Mileage<span>FORM ENTRY<span>Drive Style<span>FORM ENTRY</p>\n            <p>Maintenance Style<span>FORM ENTRY<span>Prompt Style<span>FORM ENTRY</p>\n            <p>Calc Maintenance Button</p>\n        </section>\n        <section class='carPic'>\n            <img src='./Data/car1.jpg' >\n        </section>\n        <section class='maintMessage'>\n            <p> To Do - Maintenance Prompts</p>\n            <p> To Do - Maintenance Prompts</p>\n        </section>\n        <section class='promotions'>\n            <div>\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n            </div>    \n            <div>\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n            </div>    \n        </section>\n    </section>\n\n      "
 };
 /*
         <-- <p>${dataStore.garage(make)}</p>  -->
@@ -2567,7 +2563,7 @@ var ref = '';
 function render(state, dataStore) {
   // functions are invoked to return the results for each
   console.log('render using state = ', state);
-  document.querySelector('#root').innerHTML = "\n      ".concat(dataStore(dataStore), "\n      ").concat((0, _maintCalc.default)(state, dataStore), "\n      ").concat((0, _Header.default)(state, dataStore), "\n      ").concat((0, _Navigation.default)(state, dataStore), "\n      ").concat((0, _Main.default)(state, dataStore), "\n      ").concat((0, _Footer.default)(state, dataStore), "\n    "); // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
+  document.querySelector('#root').innerHTML = "\n      ".concat((0, _maintCalc.default)(state, dataStore), "\n      ").concat((0, _Header.default)(state, dataStore), "\n      ").concat((0, _Navigation.default)(state, dataStore), "\n      ").concat((0, _Main.default)(state, dataStore), "\n      ").concat((0, _Footer.default)(state, dataStore), "\n    "); // updatePageLinks works with 'data-navigo' and the <a href> links in Navigation component
 
   router.updatePageLinks();
 }
@@ -2594,7 +2590,7 @@ navItems.forEach(function eventListenerAdder(navItem){
 // request to render a page passes in a selected state.
 
 console.log(store.home);
-render(store.home);
+render(store.home, _dataStore.default);
 /**
   .on is a Navigo method - behaves as any event listener
   .on 'listens' to location.pathname and responds accordingly
