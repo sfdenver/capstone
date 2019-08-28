@@ -9,12 +9,34 @@ export default {
     'page': `
     <section class='homeGrid'>
         <section class='homeMenu'>
-            <p>Mileage<span>FORM ENTRY<span>Drive Style<span>FORM ENTRY</p>
-            <p>Maintenance Style<span>FORM ENTRY<span>Prompt Style<span>FORM ENTRY</p>
+            <div>
+                <form action='../Store/Home.js'>
+                    <p>Mileage
+                    <input type='text' name='mileageNow' maxlength='6'>
+                    </p>
+                </form>
+                <script>console.log(mileageNow)</script>
+            </div>
+            <div>
+                <form action='../Store/Home.js'>
+                <p>Drive Style</p>
+                <select name='driveStyleNow'>
+                    <option value='Careful'>Careful</option>
+                    <option value='Steady'>Steady</option>
+                    <option value='Charge'>Charge</option>
+                    <option value='Woah!'>Woah!</option>
+                    <option value='Backcountry'>Backcountry</option>
+                </select>
+                </form>
+            </div>
+            <p>Drive Style  FORM ENTRY</p>
+            <p>Maintenance Style</p>
+            <p>FORM ENTRY  Prompt Style</p>
+            <p>FORM ENTRY</p>
             <p>Calc Maintenance Button</p>
         </section>
         <section class='carPic'>
-            <img src='../Data/car1.jpg' >
+            <p></P>
         </section>
         <section class='maintMessage'>
             <p> To Do - Maintenance Prompts</p>
@@ -23,11 +45,9 @@ export default {
         <section class='promotions'>
             <div>
                 <p> To Do - Marketing Promotion Information  </p>
-                <a href = "#" class = "cta-btn" >Promotion Details </a>
             </div>    
             <div>
                 <p> To Do - Marketing Promotion Information  </p>
-                <a href = "#" class = "cta-btn" >Promotion Details </a>
             </div>    
         </section>
     </section>

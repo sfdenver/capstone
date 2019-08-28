@@ -22,7 +22,7 @@ dataStore.garage = [ {
     'model': 'G35x',
     'year': '2009',
     'VIN': 'X231876',
-    'carPic': 'url(./Data/car1.jpg)',
+    'carPic': './Data/car1.jpg',
     'nickname': 'car 1',
     'currentMileage': 88000,
     'driveHistory': [

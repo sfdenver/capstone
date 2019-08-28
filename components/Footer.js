@@ -1,6 +1,6 @@
 export default (state, ref) => `
 <footer class='footer'>
-    <p>luvmyride.com</p>
-    <p>copyright 2019</p>
+    <strong><p>luvmyride.com</p></strong>
+    <strong><p>copyright 2019</p></strong>
 </footer>
 `;

@@ -157,16 +157,16 @@ function linkBuilder(links) {
   return links.map(function (link) {
     return (
       /**
-                                          An HTML data attribute provides additional information that can be used by JS as a hook.
-                                          In this case, 'navigo' is something that navigo uses to bind the link 'text' to the   Navigo router.
-                                          */
+                                                          An HTML data attribute provides additional information that can be used by JS as a hook.
+                                                          In this case, 'navigo' is something that navigo uses to bind the link 'text' to the   Navigo router.
+                                                          */
       "<li><a href=\"/".concat(link.toLowerCase(), "\"\n        data-navigo>").concat(link, "</a></li>")
     );
   }).join(' ');
 }
 
 var _default = function _default(state) {
-  return "\n<nav class='nav'>\n    <ul>\n        <li class=\"dropdown\">\n        ICON\n        <ul>\n            ".concat(linkBuilder(state.links.dropdown), "\n        </ul>\n        </li>\n    </ul>\n  </nav>\n");
+  return "\n<nav class='nav'>\n    <ul>\n        <li class=\"dropdown\">\n        \n        <ul>\n            ".concat(linkBuilder(state.links.dropdown), "\n        </ul>\n        </li>\n    </ul>\n  </nav>\n");
 };
 /** ${linkBuilder(state.links.primary)} */
 
@@ -211,7 +211,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(state, ref) {
-  return "\n<footer class='footer'>\n    <p>luvmyride.com</p>\n    <p>copyright 2019</p>\n</footer>\n";
+  return "\n<footer class='footer'>\n    <strong><p>luvmyride.com</p></strong>\n    <strong><p>copyright 2019</p></strong>\n</footer>\n";
 };
 
 exports.default = _default;
@@ -234,7 +234,7 @@ var _default = {
     'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
   'title': 'This is the home page!',
-  'page': "\n    <section class='homeGrid'>\n        <section class='homeMenu'>\n            <p>Mileage<span>FORM ENTRY<span>Drive Style<span>FORM ENTRY</p>\n            <p>Maintenance Style<span>FORM ENTRY<span>Prompt Style<span>FORM ENTRY</p>\n            <p>Calc Maintenance Button</p>\n        </section>\n        <section class='carPic'>\n            <img src='./Data/car1.jpg' >\n        </section>\n        <section class='maintMessage'>\n            <p> To Do - Maintenance Prompts</p>\n            <p> To Do - Maintenance Prompts</p>\n        </section>\n        <section class='promotions'>\n            <div>\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n            </div>    \n            <div>\n                <p> To Do - Marketing Promotion Information  </p>\n                <a href = \"#\" class = \"cta-btn\" >Promotion Details </a>\n            </div>    \n        </section>\n    </section>\n\n      "
+  'page': "\n    <section class='homeGrid'>\n        <section class='homeMenu'>\n            <div>\n                <form action='../Store/Home.js'>\n                    <p>Mileage\n                    <input type='text' name='mileageNow' maxlength='6'>\n                    </p>\n                </form>\n                <script>console.log(mileageNow)</script>\n            </div>\n            <div>\n                <form action='../Store/Home.js'>\n                <p>Drive Style</p>\n                <select name='driveStyleNow'>\n                    <option value='Careful'>Careful</option>\n                    <option value='Steady'>Steady</option>\n                    <option value='Charge'>Charge</option>\n                    <option value='Woah!'>Woah!</option>\n                    <option value='Backcountry'>Backcountry</option>\n                </select>\n                </form>\n            </div>\n            <p>Drive Style  FORM ENTRY</p>\n            <p>Maintenance Style</p>\n            <p>FORM ENTRY  Prompt Style</p>\n            <p>FORM ENTRY</p>\n            <p>Calc Maintenance Button</p>\n        </section>\n        <section class='carPic'>\n            <p></P>\n        </section>\n        <section class='maintMessage'>\n            <p> To Do - Maintenance Prompts</p>\n            <p> To Do - Maintenance Prompts</p>\n        </section>\n        <section class='promotions'>\n            <div>\n                <p> To Do - Marketing Promotion Information  </p>\n            </div>    \n            <div>\n                <p> To Do - Marketing Promotion Information  </p>\n            </div>    \n        </section>\n    </section>\n\n      "
 };
 /*
         <-- <p>${dataStore.garage(make)}</p>  -->
@@ -368,7 +368,7 @@ var _default = {
     'dropdown': ['Home', 'Car', 'MaintPrompt', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
   'title': 'Car Details',
-  'page': "\n    <section class = 'secondPage'>\n      <section>\n        <p>img src='./Data/car1.jpg'</p>;\n      </section>\n      <section>\n        <p>img src='./Data/car1.jpg'</p>;\n      </section>\n\n    </section>\n  "
+  'page': "\n    <section class = 'secondPage'>\n      <section>\n        <img src='./Data/car1.jpg' />\n      </section>\n      <section>\n        <p>placeholder</p>\n      </section>\n    </section>\n  "
 };
 exports.default = _default;
 },{}],"store/CarHelp.js":[function(require,module,exports) {
@@ -2346,7 +2346,7 @@ navItems.forEach(function eventListenerAdder(navItem){
 // request to render a page passes in a selected state.
 
 console.log(store.home);
-render(store.home, dataStore);
+render(store.home);
 /**
   .on is a Navigo method - behaves as any event listener
   .on 'listens' to location.pathname and responds accordingly
@@ -2727,7 +2727,7 @@ dataStore.promoAvailable = [{
   'promoDetails': 'placeholder for image or url reference'
 }];
 console.log('second dataStore log');
-},{"./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/18132/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/4104/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2755,7 +2755,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56713" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49898" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2930,5 +2930,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/18132/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/4104/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/capstone.e31bb0bc.js.map
