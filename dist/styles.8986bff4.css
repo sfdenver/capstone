@@ -176,9 +176,9 @@ body {
 
 .homeGrid {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 60px 3fr 3fr 3fr;
-    grid-template-areas: "homeMenu""carPic" "maintMessage" "promotions";
+    grid-template-columns: 6fr 4fr;
+    grid-template-rows: 3fr 3fr 3fr;
+    grid-template-areas: "carPic homeMenu" "maintMessage maintMessage" "promotions promotions";
     padding-left: 10px;
     padding-top: 0px;
     padding-right: 10px;
@@ -189,16 +189,17 @@ body {
 
 .homeMenu {
     grid-area: homeMenu;
+    display: flex;
+    flex-direction: column;
     overflow: scroll;
     background-color: rgba(255, 255, 255, 1);
-    overflow: scroll;
 }
 
 .carPic {
     grid-area: carPic;
     display: flex;
     flex-direction: column;
-    background-image: url("/car1.565c7259.jpg");
+    background-image: url("/car1.af1ad116.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -208,10 +209,19 @@ body {
 img {
     display: block;
     margin: 0ps auto;
+    position: middle;
+}
+
+
+/*
+img {
+    display: block;
+    margin: 0ps auto;
     width: 250px;
     height: 250px;
     position: middle;
 }
+*/
 
 .maintMessage {
     grid-area: maintMessage;
