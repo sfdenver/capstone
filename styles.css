@@ -160,7 +160,7 @@ body {
 .footer {
     grid-area: footer;
     display: flex;
-    border-top: solid 3px red;
+    border-top: solid 3px rgba(163, 11, 55, 1);
     background-color: rgba(113, 154, 216, 1);
     margin: 0px 0px 0px 0px;
     font-style: italic;
@@ -176,7 +176,7 @@ body {
 
 .homeGrid {
     display: grid;
-    grid-template-columns: 6fr 4fr;
+    grid-template-columns: 5fr 5fr;
     grid-template-rows: 3fr 3fr 3fr;
     grid-template-areas: "carPic homeMenu" "maintMessage maintMessage" "promotions promotions";
     padding-left: 10px;
@@ -195,15 +195,44 @@ body {
     background-color: rgba(255, 255, 255, 1);
 }
 
+.homeMenu>p {
+    font-size: .8rem;
+}
+
+.homeMenu>form {
+    color: black;
+    width: auto;
+    border: 0px;
+    margin: 0px auto;
+    padding: 0px;
+    font-size: .8rem;
+}
+
 .carPic {
     grid-area: carPic;
     display: flex;
     flex-direction: column;
+    color: rgba(255, 255, 255, 1);
+    align-content: baseline;
     background-image: url("./dist/car1.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     overflow: hide;
+}
+
+.carPic>form {
+    display: flexbox;
+    color: rgba(255, 255, 255, 1);
+    align-content: baseline;
+    height: auto;
+    width: auto;
+    border: 0px;
+    margin: 0px auto;
+    padding: 0px;
+    font-size: .5rem;
+    line-height: 0%;
+    background: rgba(0, 0, 0, .3);
 }
 
 img {
@@ -410,11 +439,11 @@ nav>ul>li {
 /*  Contact Page form  */
 
 form {
-    border: solid 3px slategray;
+    border: 0px;
     color: black;
     width: 60vw;
-    margin: 10px auto;
-    padding: 10px;
+    margin: 0px auto;
+    padding: 0px;
 }
 
 form span {

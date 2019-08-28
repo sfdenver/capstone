@@ -11,32 +11,46 @@ export default {
         <section class='homeMenu'>
             <div>
                 <form action='../Store/Home.js'>
-                    <p>Mileage
+                    <p>Mileage<br>
                     <input type='text' name='mileageNow' maxlength='6'>
                     </p>
-                </form>
-                <script>console.log(mileageNow)</script>
-            </div>
-            <div>
-                <form action='../Store/Home.js'>
-                <p>Drive Style</p>
-                <select name='driveStyleNow'>
+                  <p>Drive Style<br>
+                    <select name='driveStyleNow'>
                     <option value='Careful'>Careful</option>
                     <option value='Steady'>Steady</option>
                     <option value='Charge'>Charge</option>
                     <option value='Woah!'>Woah!</option>
-                    <option value='Backcountry'>Backcountry</option>
-                </select>
+                    <option value='Backcountry'>Back Country</option>
+                    </select>
+                  </p>
+                  <p>Maintenance Style<br>
+                    <select name='maintStyleNow'>
+                    <option value='Early'>Early</option>
+                    <option value='On Time'>On Time</option>
+                    <option value='Close Enough'>Close Enough</option>
+                    <option value='Late as Possible'>Late as Possible</option>
+                    <option value='When It Breaks'>When It Breaks</option>
+                    </select>
+                  </p>
+                  <p>Coach Preference<br>
+                    <select name='promptStyleNow'>
+                    <option value='Polite'>Polite</option>
+                    <option value='Whine'>Whine</option>
+                    <option value='Drill Sergeant'>Drill Sergeant</option>
+                    <option value='Don Rickles'>Don Rickles</option>
+                    <option value='HAL'>HAL</option>
+                    </select>
+                  </p>
+                  <input type="submit" name="Update" value="Update" />
                 </form>
             </div>
-            <p>Drive Style  FORM ENTRY</p>
-            <p>Maintenance Style</p>
-            <p>FORM ENTRY  Prompt Style</p>
-            <p>FORM ENTRY</p>
-            <p>Calc Maintenance Button</p>
         </section>
         <section class='carPic'>
-            <p></P>
+            <form action='../Store/Home.js'>
+                <p>Mileage
+                <input type='text' name='mileageNow' maxlength='6'>
+                </p>
+            </form>
         </section>
         <section class='maintMessage'>
             <p> To Do - Maintenance Prompts</p>

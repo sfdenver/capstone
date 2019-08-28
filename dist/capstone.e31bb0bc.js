@@ -234,7 +234,7 @@ var _default = {
     'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
   'title': 'This is the home page!',
-  'page': "\n    <section class='homeGrid'>\n        <section class='homeMenu'>\n            <div>\n                <form action='../Store/Home.js'>\n                    <p>Mileage\n                    <input type='text' name='mileageNow' maxlength='6'>\n                    </p>\n                </form>\n                <script>console.log(mileageNow)</script>\n            </div>\n            <div>\n                <form action='../Store/Home.js'>\n                <p>Drive Style</p>\n                <select name='driveStyleNow'>\n                    <option value='Careful'>Careful</option>\n                    <option value='Steady'>Steady</option>\n                    <option value='Charge'>Charge</option>\n                    <option value='Woah!'>Woah!</option>\n                    <option value='Backcountry'>Backcountry</option>\n                </select>\n                </form>\n            </div>\n            <p>Drive Style  FORM ENTRY</p>\n            <p>Maintenance Style</p>\n            <p>FORM ENTRY  Prompt Style</p>\n            <p>FORM ENTRY</p>\n            <p>Calc Maintenance Button</p>\n        </section>\n        <section class='carPic'>\n            <p></P>\n        </section>\n        <section class='maintMessage'>\n            <p> To Do - Maintenance Prompts</p>\n            <p> To Do - Maintenance Prompts</p>\n        </section>\n        <section class='promotions'>\n            <div>\n                <p> To Do - Marketing Promotion Information  </p>\n            </div>    \n            <div>\n                <p> To Do - Marketing Promotion Information  </p>\n            </div>    \n        </section>\n    </section>\n\n      "
+  'page': "\n    <section class='homeGrid'>\n        <section class='homeMenu'>\n            <div>\n                <form action='../Store/Home.js'>\n                    <p>Mileage<br>\n                    <input type='text' name='mileageNow' maxlength='6'>\n                    </p>\n                  <p>Drive Style<br>\n                    <select name='driveStyleNow'>\n                    <option value='Careful'>Careful</option>\n                    <option value='Steady'>Steady</option>\n                    <option value='Charge'>Charge</option>\n                    <option value='Woah!'>Woah!</option>\n                    <option value='Backcountry'>Back Country</option>\n                    </select>\n                  </p>\n                  <p>Maintenance Style<br>\n                    <select name='maintStyleNow'>\n                    <option value='Early'>Early</option>\n                    <option value='On Time'>On Time</option>\n                    <option value='Close Enough'>Close Enough</option>\n                    <option value='Late as Possible'>Late as Possible</option>\n                    <option value='When It Breaks'>When It Breaks</option>\n                    </select>\n                  </p>\n                  <p>Coach Preference<br>\n                    <select name='promptStyleNow'>\n                    <option value='Polite'>Polite</option>\n                    <option value='Whine'>Whine</option>\n                    <option value='Drill Sergeant'>Drill Sergeant</option>\n                    <option value='Don Rickles'>Don Rickles</option>\n                    <option value='HAL'>HAL</option>\n                    </select>\n                  </p>\n                  <input type=\"submit\" name=\"Update\" value=\"Update\" />\n                </form>\n            </div>\n        </section>\n        <section class='carPic'>\n            <form action='../Store/Home.js'>\n                <p>Mileage\n                <input type='text' name='mileageNow' maxlength='6'>\n                </p>\n            </form>\n        </section>\n        <section class='maintMessage'>\n            <p> To Do - Maintenance Prompts</p>\n            <p> To Do - Maintenance Prompts</p>\n        </section>\n        <section class='promotions'>\n            <div>\n                <p> To Do - Marketing Promotion Information  </p>\n            </div>    \n            <div>\n                <p> To Do - Marketing Promotion Information  </p>\n            </div>    \n        </section>\n    </section>\n\n      "
 };
 /*
         <-- <p>${dataStore.garage(make)}</p>  -->
@@ -2727,7 +2727,7 @@ dataStore.promoAvailable = [{
   'promoDetails': 'placeholder for image or url reference'
 }];
 console.log('second dataStore log');
-},{"./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/17568/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/3100/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2755,7 +2755,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56407" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57731" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2930,5 +2930,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/17568/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/3100/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/capstone.e31bb0bc.js.map
