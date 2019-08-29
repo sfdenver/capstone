@@ -215,7 +215,7 @@ body {
     grid-area: carPic;
     display: inline-flex;
     flex-direction: column;
-    color: rgba(255, 255, 255, 1);
+    color: black;
     text-align: center;
     justify-content: center;
     align-content: center;
@@ -228,10 +228,10 @@ body {
     margin: 0px;
     padding: 0px;
     font-size: 1rem;
-    line-height: 0%;
+    line-height: 1rem;
 }
 
-.carPic>h4 {
+.carPicText {
     display: inherit;
     color: black;
     align-content: center;
@@ -246,16 +246,16 @@ body {
 }
 
 img {
-    display: block;
-    margin: 0ps auto;
-    position: middle;
+    float: left;
+    width: 500px;
+    margin: 0px auto;
 }
 
 
 /*
 img {
     display: block;
-    margin: 0ps auto;
+    margin: 0px auto;
     width: 250px;
     height: 250px;
     position: middle;
@@ -361,7 +361,7 @@ img {
     margin: 0px;
     padding: 0px;
     font-size: 1rem;
-    line-height: 0%;
+    line-height: 1rem;
 }
 
 .contentMessage {
@@ -406,11 +406,12 @@ figure {
 }
 
 
-/* stock image embedded in figure  */
+/* stock image embedded in figure  
 
 img {
     max-width: 100%;
 }
+*/
 
 
 /* Navigation section */
