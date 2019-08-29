@@ -8,8 +8,8 @@ export default {
     <section class='secondPage'>
         <section class='homeMenu2'>
           <h4 class = 'normalComments'>
-            5/15/2019
-            <br>81,000 miles
+            3/10/2018
+            <br>66,000 miles
             <br>Plaza Infinity
             <br>Oil
             <br>Oil Change, Synthetic Oil 15,000 miles

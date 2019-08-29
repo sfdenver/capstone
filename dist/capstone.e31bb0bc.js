@@ -584,7 +584,7 @@ var _default = {
     'dropdown': ['Home', 'CarDetails', 'Promotion', 'CarHelp', 'Records']
   },
   'title': 'Maintenance Records',
-  'page': "\n    <section class='secondPage'>\n        <section class='homeMenu2'>\n          <h4 class = 'normalComments'>\n            5/15/2019\n            <br>81,000 miles\n            <br>Plaza Infinity\n            <br>Oil\n            <br>Oil Change, Synthetic Oil 15,000 miles\n          </p>\n        </section>\n        <section class='carPic2'>\n          <h4 class='carPicText'>Mileage 96,252</h4>\n        </section>\n        <section class ='contentMessage'>\n          <div>\n            <img src='/repair1.jpg' />\n          </div>\n        </section>\n    </section>\n  "
+  'page': "\n    <section class='secondPage'>\n        <section class='homeMenu2'>\n          <h4 class = 'normalComments'>\n            3/10/2018\n            <br>66,000 miles\n            <br>Plaza Infinity\n            <br>Oil\n            <br>Oil Change, Synthetic Oil 15,000 miles\n          </p>\n        </section>\n        <section class='carPic2'>\n          <h4 class='carPicText'>Mileage 96,252</h4>\n        </section>\n        <section class ='contentMessage'>\n          <div>\n            <img src='/repair1.jpg' />\n          </div>\n        </section>\n    </section>\n  "
 };
 exports.default = _default;
 },{}],"store/Standards.js":[function(require,module,exports) {
