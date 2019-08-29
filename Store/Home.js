@@ -3,13 +3,14 @@ console.log('first home page log');
 export default {
     'links': {
         'primary': [ 'Home' ],
-        'dropdown': [ 'Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards' ]
+        'dropdown': [ 'Home', 'CarDetails', 'Promotion', 'CarHelp', 'Records' ]
     },
     'title': 'My Garage!',
     'page': `
     <section class='homeGrid'>
         <section class='homeMenu'>
             <div class='homeMenuForms'>
+                <b>
                 <form action='../Store/Home.js'  class='homeMenuForms'>
                   <p class='homeMenuForms'>Drive Style<br>
                     <select name='driveStyleNow'>
@@ -42,6 +43,7 @@ export default {
                   </p>
                   <input type="submit" name="Update" value="Update" />
                 </form>
+                </b>
             </div>
         </section>
         <section class='carPic'>
@@ -49,22 +51,25 @@ export default {
         </section>
         <section class ='maintMessage'>
             <div class='messageItem'>
-                <h5 class='normalMessage'>
-                What are you doing - taking a nap? Get up and move it. Important maintenance now needed!
-                </h5>
+                <h4 class='maintHopeless'><b>66,000 | Oil Change | Now Hopeless</b></h4>
+                <h5 class='maintHopeless'>YOU ARE PATHETIC. YOUR CAR IS FALLING APART. GET MOVING AND FIX YOUR CAR!</h5>
             </div>
             <div class='messageItem'>
-                <h4 class='maintHeadsUp'><b>100,000   Transmission Heads-up</b></h4>
-                <h5 class='maintHeadsUp'>Are you sleepy? Time to wake up and get ready! Important service needed soon!</h5>
+                <h4 class='normalMessage'><b>90,000 | Brake Service | Warning</b></h4>
+                <h5 class='normalMessage'>What are you doing - taking a nap? Get up and move it. Important maintenance now needed!</h5>
             </div>
+            <div class='messageItem'>
+                <h4 class='maintHeadsUp'><b>100,000 | Transmission | Heads-up</b></h4>
+                <h5 class='maintHeadsUp'>Are you sleepy? Time to wake up and get ready! Important service needed soon!</h5>
+            </div>        
         </section>
         <section class='promotions'>
-             <div class='messageItem'>
+            <div class='messageItem'>
                 <h4 class='maintHopeless'><b>Oil Change</b></h4>
                 <h5 class='normalMessage'><b>Plaza Infinity</b> We are Infinty repair experts. Convenient oil change while you wait! Synthetic Oil change for your Infinity for $39.95 every day!</h5>
                 <h5 class='normalMessage'><b>Precision Auto Repair</b> Special for our favorite customers. Synthhetic Oil change $34.99! Drop-off or while you wait!</h5>
             </div>
-             <div class='messageItem'>
+            <div class='messageItem'>
                 <h4 class='maintHeadsUp'><b>Brakes</b></h4>
                 <h5 class='normalMessage'><b>Plaza Infinity</b> We are Infinty repair experts. Special on brake service! 20% Off until Sept. 30, 2019.</h5>
                 <h5 class='normalMessage'><b>Precision Auto Repair</b> Special for our favorite customers. Special for Brake discs and rotars 25% Off until Nov. 1, 2019.</h5>

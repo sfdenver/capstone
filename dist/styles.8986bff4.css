@@ -200,6 +200,7 @@ body {
 
 .homeMenu>p {
     font-size: .8rem;
+    line-height: 1.25;
 }
 
 .homeMenuForms {
@@ -247,7 +248,7 @@ body {
 
 img {
     float: left;
-    width: 500px;
+    width: 100%;
     margin: 0px auto;
 }
 

@@ -1,7 +1,7 @@
 export default {
     'links': {
         'primary': [ 'Home' ],
-        'dropdown': [ 'Home', 'Car', 'MaintPrompt', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards' ]
+        'dropdown': [ 'Home', 'CarDetails', 'Promotion', 'CarHelp', 'Records' ]
     },
     'title': 'Car Details',
     'page': `
@@ -12,7 +12,7 @@ export default {
             <br>License: GO FSTR Missouri
             <br>Drive History: Commute
             <br>Miles/Year: 11,217
-          </p>
+          </h4>
         </section>
         <section class='carPic2'>
           <h4 class='carPicText'>Mileage 96,252</h4>
@@ -20,25 +20,19 @@ export default {
         <section class ='contentMessage'>
           <div>
           <table>
-            <tr>
-              <th>Date<br>Miles</th>
-              <th>Provider><br>Service></th>
+            <tr><b>
+              <th>Date
+              <br>Miles</th>
+              <th>Provider
+              <br>Service</th>
+              </b>
             </tr>
-            <tr>
-              <td>5/15/2019
-                <br>81,000
-                </td>
-              <td>Plaza Infinity
-                <br>Oil: Oil Change, Synthetic Oil 15,000 miles,>
-                </td>
-            </tr>
-
             <tr>
               <td>3/10/2018
-                <br>63,000
+                <br>66,000
                 </td>
               <td>Plaza Infinity
-                <br>Oil: Oil Change, Synthetic Oil 15,000 miles,>
+                <br>Oil: Oil Change, Synthetic Oil 15,000 miles
                 </td>
             </tr>
 
@@ -47,7 +41,7 @@ export default {
                 <br>43,000
                 </td>
               <td>Precision Auto Repair
-                <br>Oil: Oil Change, Synthetic Oil 15,000 miles,>
+                <br>Oil: Oil Change, Synthetic Oil 15,000 miles
                 </td>
             </tr>
 
@@ -56,7 +50,7 @@ export default {
                 <br>43,000
                 </td>
               <td>Precision Auto Repair
-                <br>Brakes: Brake Disks and Pads, Front, Rear, Lifetime Warranty>
+                <br>Brakes: Brake Disks and Pads, Front, Rear, Lifetime Warranty
                 </td>
             </tr>
 
@@ -65,7 +59,7 @@ export default {
                 <br>28,000
                 </td>
               <td>Plaza Infinity
-                <br>Oil: Oil Change, Synthetic Oil 15,000 miles,>
+                <br>Oil: Oil Change, Synthetic Oil 15,000 miles
                 </td>
             </tr>
           </table>
