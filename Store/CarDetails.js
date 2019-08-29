@@ -6,7 +6,7 @@ export default {
     'title': 'Car Details',
     'page': `
     <section class='secondPage'>
-        <section class='homeMenu'>
+        <section class='homeMenu2'>
           <h4 class = 'normalComments'>2009 <br>Infinity 
             <br>G35X Coupe
             <br>License: GO FSTR Missouri
@@ -14,35 +14,63 @@ export default {
             <br>Miles/Year: 11,217
           </p>
         </section>
-        <section class='carPic'>
-            <h4>Mileage 86,252</h4>
+        <section class='carPic2'>
+            <h4>Mileage 96,252</h4>
         </section>
         <section class ='contentMessage'>
-            <div class='messageItem'>
-                <h4 class='maintHopeless'><b>66,000    Oil Change Now Hopeless</b></h4>
-                <h5 class='maintHopeless'>YOU ARE PATHETIC. YOUR CAR IS FALLING APART. GET MOVING AND FIX YOUR CAR!</h5>
-            </div>
-            <div class='messageItem'>
-                <h4 class='normalMessage'><b>80,000   Break Service Warning</b></h4>
-                <h5 class='normalMessage'>What are you doing - taking a nap? Get up and move it. Important maintenance now needed!</h5>
-            </div>
-            <div class='messageItem'>
-                <h4 class='maintHeadsUp'><b>100,000   Transmission Heads-up</b></h4>
-                <h5 class='maintHeadsUp'>Are you sleepy? Time to wake up and get ready! Important service needed soon!</h5>
-            </div>
-            <div class='messageItem'>
-                <h4 class='maintHopeless'><b>Oil Change</b></h4>
-                <h5 class='normalMessage'><b>Plaza Infinity</b> We are Infinty repair experts. Convenient oil change while you wait! Synthetic Oil change for your Infinity for $39.95 every day!</h5>
-                <h5 class='normalMessage'><b>Precision Auto Repair</b> Special for our favorite customers. Synthhetic Oil change $34.99! Drop-off or while you wait!</h5>
-            </div>
-             <div class='messageItem'>
-                <h4 class='maintHeadsUp'><b>Brakes</b></h4>
-                <h5 class='normalMessage'><b>Plaza Infinity</b> We are Infinty repair experts. Special on brake service! 20% Off until Sept. 30, 2019.</h5>
-                <h5 class='normalMessage'><b>Precision Auto Repair</b> Special for our favorite customers. Special for Brake discs and rotars 25% Off until Nov. 1, 2019.</h5>
-                <h5 class='normalMessage'><b>Raymond Exotic Car Repair</b> Specialists for your sports car! High Performance Brake special 30% off until Oct. 19, 2019.</h5>
-            </div>
+          <div>
+          <table>
+            <tr>
+              <th>Date<br>Miles</th>
+              <th>Provider><br>Service></th>
+            </tr>
+            <tr>
+              <td>5/15/2019
+                <br>81,000
+                </td>
+              <td>Plaza Infinity
+                <br>Oil: Oil Change, Synthetic Oil 15,000 miles,>
+                </td>
+            </tr>
+
+            <tr>
+              <td>3/10/2018
+                <br>63,000
+                </td>
+              <td>Plaza Infinity
+                <br>Oil: Oil Change, Synthetic Oil 15,000 miles,>
+                </td>
+            </tr>
+
+            <tr>
+              <td>1/15/2017
+                <br>43,000
+                </td>
+              <td>Precision Auto Repair
+                <br>Oil: Oil Change, Synthetic Oil 15,000 miles,>
+                </td>
+            </tr>
+
+            <tr>
+              <td>1/15/2017
+                <br>43,000
+                </td>
+              <td>Precision Auto Repair
+                <br>Brakes: Brake Disks and Pads, Front, Rear, Lifetime Warranty>
+                </td>
+            </tr>
+
+            <tr>
+              <td>9/10/2015
+                <br>28,000
+                </td>
+              <td>Plaza Infinity
+                <br>Oil: Oil Change, Synthetic Oil 15,000 miles,>
+                </td>
+            </tr>
+          </table>
+          </div>
         </section>
-        
     </section>
 
   `

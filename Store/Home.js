@@ -45,7 +45,7 @@ export default {
             </div>
         </section>
         <section class='carPic'>
-            <h4>Mileage 86,252</h4>
+            <h4>Mileage 96,252</h4>
         </section>
         <section class ='maintMessage'>
             <div class='messageItem'>
