@@ -233,8 +233,8 @@ var _default = {
     'primary': ['Home'],
     'dropdown': ['Home', 'Car', 'MaintPrompts', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
-  'title': 'This is the home page!',
-  'page': "\n    <section class='homeGrid'>\n        <section class='homeMenu'>\n            <div>\n                <form action='../Store/Home.js'>\n                    <p>Mileage<br>\n                    <input type='text' name='mileageNow' maxlength='6'>\n                    </p>\n                  <p>Drive Style<br>\n                    <select name='driveStyleNow'>\n                    <option value='Careful'>Careful</option>\n                    <option value='Steady'>Steady</option>\n                    <option value='Charge'>Charge</option>\n                    <option value='Woah!'>Woah!</option>\n                    <option value='Backcountry'>Back Country</option>\n                    </select>\n                  </p>\n                  <p>Maintenance Style<br>\n                    <select name='maintStyleNow'>\n                    <option value='Early'>Early</option>\n                    <option value='On Time'>On Time</option>\n                    <option value='Close Enough'>Close Enough</option>\n                    <option value='Late as Possible'>Late as Possible</option>\n                    <option value='When It Breaks'>When It Breaks</option>\n                    </select>\n                  </p>\n                  <p>Coach Preference<br>\n                    <select name='promptStyleNow'>\n                    <option value='Polite'>Polite</option>\n                    <option value='Whine'>Whine</option>\n                    <option value='Drill Sergeant'>Drill Sergeant</option>\n                    <option value='Don Rickles'>Don Rickles</option>\n                    <option value='HAL'>HAL</option>\n                    </select>\n                  </p>\n                  <input type=\"submit\" name=\"Update\" value=\"Update\" />\n                </form>\n            </div>\n        </section>\n        <section class='carPic'>\n            <form action='../Store/Home.js'>\n                <p>Mileage\n                <input type='text' name='mileageNow' maxlength='6'>\n                </p>\n            </form>\n        </section>\n        <section class='maintMessage'>\n            <p> To Do - Maintenance Prompts</p>\n            <p> To Do - Maintenance Prompts</p>\n        </section>\n        <section class='promotions'>\n            <div>\n                <p> To Do - Marketing Promotion Information  </p>\n            </div>    \n            <div>\n                <p> To Do - Marketing Promotion Information  </p>\n            </div>    \n        </section>\n    </section>\n\n      "
+  'title': 'My Garage!',
+  'page': "\n    <section class='homeGrid'>\n        <section class='homeMenu'>\n            <div class='homeMenuForms'>\n                <form action='../Store/Home.js'  class='homeMenuForms'>\n                  <p class='homeMenuForms'>Drive Style<br>\n                    <select name='driveStyleNow'>\n                    <option value='Woah!'>Woah!</option>\n                    <option value='Careful'>Careful</option>\n                    <option value='Steady'>Steady</option>\n                    <option value='Charge'>Charge</option>\n                    <option value='Backcountry'>Back Country</option>\n                    </select>\n                  </p>\n                  <p class='homeMenuForms'>Maintenance Style<br>\n                    <select name='maintStyleNow'>\n                    <option value='Late as Possible'>Late as Possible</option>\n                    <option value='Early'>Early</option>\n                    <option value='On Time'>On Time</option>\n                    <option value='Close Enough'>Close Enough</option>\n                    <option value='Late as Possible'>Late as Possible</option>\n                    <option value='When It Breaks'>When It Breaks</option>\n                    </select>\n                  </p>\n                  <p class='homeMenuForms'>Coach Preference<br>\n                    <select name='promptStyleNow'>\n                    <option value='Drill Sergeant'>Drill Sergeant</option>\n                    <option value='Polite'>Polite</option>\n                    <option value='Whine'>Whine</option>\n                    <option value='Drill Sergeant'>Drill Sergeant</option>\n                    <option value='Don Rickles'>Don Rickles</option>\n                    <option value='HAL'>HAL</option>\n                    </select>\n                  </p>\n                  <input type=\"submit\" name=\"Update\" value=\"Update\" />\n                </form>\n            </div>\n        </section>\n        <section class='carPic'>\n            <h4>Mileage 86,252</h4>\n        </section>\n        <section class ='maintMessage'>\n            <div class='messageItem'>\n                <h5 class='normalMessage'>\n                What are you doing - taking a nap? Get up and move it. Important maintenance now needed!\n                </h5>\n            </div>\n            <div class='messageItem'>\n                <h4 class='maintHeadsUp'><b>100,000   Transmission Heads-up</b></h4>\n                <h5 class='maintHeadsUp'>Are you sleepy? Time to wake up and get ready! Important service needed soon!</h5>\n            </div>\n        </section>\n        <section class='promotions'>\n             <div class='messageItem'>\n                <h4 class='maintHopeless'><b>Oil Change</b></h4>\n                <h5 class='normalMessage'><b>Plaza Infinity</b> We are Infinty repair experts. Convenient oil change while you wait! Synthetic Oil change for your Infinity for $39.95 every day!</h5>\n                <h5 class='normalMessage'><b>Precision Auto Repair</b> Special for our favorite customers. Synthhetic Oil change $34.99! Drop-off or while you wait!</h5>\n            </div>\n             <div class='messageItem'>\n                <h4 class='maintHeadsUp'><b>Brakes</b></h4>\n                <h5 class='normalMessage'><b>Plaza Infinity</b> We are Infinty repair experts. Special on brake service! 20% Off until Sept. 30, 2019.</h5>\n                <h5 class='normalMessage'><b>Precision Auto Repair</b> Special for our favorite customers. Special for Brake discs and rotars 25% Off until Nov. 1, 2019.</h5>\n                <h5 class='normalMessage'><b>Raymond Exotic Car Repair</b> Specialists for your sports car! High Performance Brake special 30% off until Oct. 19, 2019.</h5>\n            </div>\n        </section>\n        \n    </section>\n\n      "
 };
 /*
         <-- <p>${dataStore.garage(make)}</p>  -->
@@ -339,6 +339,37 @@ dataStore.promptStyle = [{
     'Hopeless': 'You may be worthless, and so will your car. It may not matter anymore. Critical service is hopelessly overdue!'
   }]
 }];
+dataStore.promoAvailable = [{
+  'id': 1,
+  'serviceCategory': 'Brakes',
+  'promoProvider': 'Plaza Infinity',
+  'message': 'We are Infinty repair experts - give us a try. Special on brake service! 20% Off until Sept. 30, 2019.',
+  'promoDetails': 'placeholder for image or url reference'
+}, {
+  'id': 2,
+  'serviceCategory': 'Oil Change',
+  'promoProvider': 'Plaza Infinity',
+  'message': 'Convenient oil change while you wait! Synthetic Oil change for your Infinity for $39.95 every day',
+  'promoDetails': 'placeholder for image or url reference'
+}, {
+  'id': 3,
+  'serviceCategory': 'Brakes',
+  'promoProvider': 'Precision Auto Repair',
+  'message': 'Special for our favorite customers. Special for Brake discs and rotars 25% Off until Nov. 1, 2019.',
+  'promoDetails': 'placeholder for image or url reference'
+}, {
+  'id': 4,
+  'serviceCategory': 'Brakes',
+  'promoProvider': 'Raymond Exotic Car Repair',
+  'message': 'Specialists for your sports car! High Performance Brake special 30% off until Oct. 19, 2019.',
+  'promoDetails': 'placeholder for image or url reference'
+}, {
+  'id': 5,
+  'serviceCategory': 'Oil Change',
+  'promoProvider': 'Precision Auto Repair',
+  'message': 'Special for our favorite customers. Synthhetic Oil change $34.99! Drop-off or while you wait!',
+  'promoDetails': 'placeholder for image or url reference'
+}];
 },{}],"store/Car.js":[function(require,module,exports) {
 "use strict";
 
@@ -368,9 +399,98 @@ var _default = {
     'dropdown': ['Home', 'Car', 'MaintPrompt', 'Profile', 'Promotion', 'Providers', 'CarDetails', 'CarHelp', 'Records', 'Standards']
   },
   'title': 'Car Details',
-  'page': "\n    <section class = 'secondPage'>\n      <section>\n        <img src='./Data/car1.jpg' />\n      </section>\n      <section>\n        <p>placeholder</p>\n      </section>\n    </section>\n  "
+  'page': "\n    <section class='secondPage'>\n        <section class='homeMenu'>\n          <h4 class = 'normalComments'>2009 <br>Infinity \n            <br>G35X Coupe\n            <br>License: GO FSTR Missouri\n            <br>Drive History: Commute\n            <br>Miles/Year: 11,217\n          </p>\n        </section>\n        <section class='carPic'>\n            <h4>Mileage 86,252</h4>\n        </section>\n        <section class ='contentMessage'>\n            <div class='messageItem'>\n                <h4 class='maintHopeless'><b>66,000    Oil Change Now Hopeless</b></h4>\n                <h5 class='maintHopeless'>YOU ARE PATHETIC. YOUR CAR IS FALLING APART. GET MOVING AND FIX YOUR CAR!</h5>\n            </div>\n            <div class='messageItem'>\n                <h4 class='normalMessage'><b>80,000   Break Service Warning</b></h4>\n                <h5 class='normalMessage'>What are you doing - taking a nap? Get up and move it. Important maintenance now needed!</h5>\n            </div>\n            <div class='messageItem'>\n                <h4 class='maintHeadsUp'><b>100,000   Transmission Heads-up</b></h4>\n                <h5 class='maintHeadsUp'>Are you sleepy? Time to wake up and get ready! Important service needed soon!</h5>\n            </div>\n            <div class='messageItem'>\n                <h4 class='maintHopeless'><b>Oil Change</b></h4>\n                <h5 class='normalMessage'><b>Plaza Infinity</b> We are Infinty repair experts. Convenient oil change while you wait! Synthetic Oil change for your Infinity for $39.95 every day!</h5>\n                <h5 class='normalMessage'><b>Precision Auto Repair</b> Special for our favorite customers. Synthhetic Oil change $34.99! Drop-off or while you wait!</h5>\n            </div>\n             <div class='messageItem'>\n                <h4 class='maintHeadsUp'><b>Brakes</b></h4>\n                <h5 class='normalMessage'><b>Plaza Infinity</b> We are Infinty repair experts. Special on brake service! 20% Off until Sept. 30, 2019.</h5>\n                <h5 class='normalMessage'><b>Precision Auto Repair</b> Special for our favorite customers. Special for Brake discs and rotars 25% Off until Nov. 1, 2019.</h5>\n                <h5 class='normalMessage'><b>Raymond Exotic Car Repair</b> Specialists for your sports car! High Performance Brake special 30% off until Oct. 19, 2019.</h5>\n            </div>\n        </section>\n        \n    </section>\n\n  "
 };
 exports.default = _default;
+var dataStore = {};
+dataStore.garage = [{
+  'ID	 ': 1,
+  'make': 'Infinity',
+  'model': 'G35x',
+  'year': '2009',
+  'VIN': 'X231876',
+  'carPic': './Data/car1.jpg',
+  'nickname': 'car 1',
+  'currentMileage': 88000,
+  'driveHistory': [{
+    'year': 19,
+    'month': 5,
+    'day': 15,
+    'mileage': 83000,
+    'avgSpeed': 32,
+    'stopsPerMile': 3.4
+  }, {
+    'year': 18,
+    'month': 11,
+    'day': 15,
+    'mileage': 72000,
+    'avgSpeed': 32,
+    'stopsPerMile': 3.4
+  }, {
+    'year': 17,
+    'month': 2,
+    'day': 15,
+    'mileage': 66000,
+    'avgSpeed': 32,
+    'stopsPerMile': 3.4
+  }, {
+    'year': 16,
+    'month': 8,
+    'day': 15,
+    'mileage': 55000,
+    'avgSpeed': 32,
+    'stopsPerMile': 3.4
+  }],
+  'maintStandards': [{
+    'oil': 7500,
+    'air filter': 15000,
+    'brakes': 35000,
+    'transmission': 75000,
+    'engine': 100000
+  }],
+  'warranty': [{
+    'summary': 'placeholder'
+  }],
+  'repairs': [{
+    'carID': 1,
+    'repairHistory': [{
+      'year': 19,
+      'month': 5,
+      'day': 15,
+      'mileage': 81000,
+      'repair': 'Oil',
+      'providerName': 'Plaza Infinity'
+    }, {
+      'year': 18,
+      'month': 10,
+      'day': 15,
+      'mileage': 73000,
+      'repair': 'Oil',
+      'providerName': 'Plaza Infinity'
+    }, {
+      'year': 18,
+      'month': 1,
+      'day': 15,
+      'mileage': 63000,
+      'repair': 'Oil',
+      'providerName': 'Precision Auto Repair'
+    }, {
+      'year': 17,
+      'month': 5,
+      'day': 15,
+      'mileage': 53000,
+      'repair': 'Brakes',
+      'providerName': 'Plaza Infinity'
+    }, {
+      'year': 17,
+      'month': 5,
+      'day': 15,
+      'mileage': 53000,
+      'repair': 'Oil',
+      'providerName': 'Plaza Infinity'
+    }]
+  }]
+}];
 },{}],"store/CarHelp.js":[function(require,module,exports) {
 "use strict";
 
@@ -2727,7 +2847,7 @@ dataStore.promoAvailable = [{
   'promoDetails': 'placeholder for image or url reference'
 }];
 console.log('second dataStore log');
-},{"./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/3100/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/maintCalc":"components/maintCalc.js","./components/Navigation":"components/Navigation.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js","./components/Footer":"components/Footer.js","navigo":"node_modules/navigo/lib/navigo.min.js","./store":"store/index.js","axios":"node_modules/axios/index.js"}],"../../../AppData/Roaming/npm-cache/_npx/4820/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2755,7 +2875,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57731" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49890" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2930,5 +3050,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/3100/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/4820/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/capstone.e31bb0bc.js.map

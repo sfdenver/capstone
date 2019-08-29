@@ -75,6 +75,9 @@ h5 {
     font-weight: 400;
     line-height: 1.15;
     background-color: rgba(255, 255, 255, 1);
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
 
 h1 {
@@ -199,40 +202,47 @@ body {
     font-size: .8rem;
 }
 
-.homeMenu>form {
+.homeMenuForms {
     color: black;
     width: auto;
     border: 0px;
-    margin: 0px auto;
+    margin: 0px;
     padding: 0px;
-    font-size: .8rem;
+    font-size: 1rem;
 }
 
 .carPic {
     grid-area: carPic;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     color: rgba(255, 255, 255, 1);
-    align-content: baseline;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
     background-image: url("./dist/car1.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     overflow: hide;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;
+    line-height: 0%;
 }
 
-.carPic>form {
-    display: flexbox;
-    color: rgba(255, 255, 255, 1);
-    align-content: baseline;
+.carPic>h4 {
+    display: inherit;
+    color: black;
+    align-content: center;
     height: auto;
     width: auto;
     border: 0px;
     margin: 0px auto;
     padding: 0px;
-    font-size: .5rem;
-    line-height: 0%;
-    background: rgba(0, 0, 0, .3);
+    font-size: 1rem;
+    line-height: 1rem;
+    background-color: white;
 }
 
 img {
@@ -258,6 +268,48 @@ img {
     display: flex;
     flex-direction: column;
     overflow: scroll;
+    font-size: 1rem;
+    line-height: 1rem;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.messageItem {
+    margin-top: 5px;
+}
+
+.maintHopeless {
+    color: rgba(163, 11, 55, 1);
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 1rem;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.normalMessage {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 1rem;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.maintHeadsUp {
+    color: rgb(21, 102, 21);
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 1rem;
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .promotions {
@@ -273,16 +325,39 @@ img {
 
 .secondPage {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "secondPage";
+    grid-template-columns: 5fr 5fr;
+    grid-template-rows: 3fr 6fr;
+    grid-template-areas: "carPic homeMenu" "content content";
     padding-left: 10px;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-right: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     height: 100%;
     gap: 10px 10px;
+}
+
+.contentMessage {
+    grid-area: content;
     background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    font-size: 1rem;
+    line-height: 1rem;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.normalComments {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -336,7 +411,7 @@ nav>ul {
     image-rendering: auto;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: 75%;
 }
 
 nav>ul>li {
@@ -438,6 +513,8 @@ nav>ul>li {
 
 /*  Contact Page form  */
 
+
+/*
 form {
     border: 0px;
     color: black;
@@ -449,6 +526,7 @@ form {
 form span {
     margin: 0 5px;
 }
+*/
 
 
 /* Attribute selector  */
